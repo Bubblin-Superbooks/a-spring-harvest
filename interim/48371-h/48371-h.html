@@ -1,0 +1,3046 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.1//EN' 'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
+<style type="text/css">
+/*
+Project Gutenberg common docutils stylesheet.
+
+This stylesheet contains styles common to HTML and EPUB.  Put styles
+that are specific to HTML and EPUB into their relative stylesheets.
+
+:Author: Marcello Perathoner (webmaster@gutenberg.org)
+:Copyright: This stylesheet has been placed in the public domain.
+
+This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+*/
+
+/* ADE 1.7.2 chokes on !important and throws all css out. */
+
+/* FONTS */
+
+.italics    { font-style: italic }
+.no-italics { font-style: normal }
+
+.bold       { font-weight: bold }
+.no-bold    { font-weight: normal }
+
+.small-caps { } /* Epub needs italics */
+.gesperrt   { } /* Epub needs italics */
+.antiqua    { font-style: italic } /* what else can we do ? */
+.monospaced { font-family: monospace }
+
+.smaller    { font-size: smaller }
+.larger     { font-size: larger }
+
+.xx-small   { font-size: xx-small }
+.x-small    { font-size: x-small }
+.small      { font-size: small }
+.medium     { font-size: medium }
+.large      { font-size: large }
+.x-large    { font-size: x-large }
+.xx-large   { font-size: xx-large }
+
+.text-transform-uppercase { text-transform: uppercase }
+.text-transform-lowercase { text-transform: lowercase }
+.text-transform-none      { text-transform: none }
+
+.red        { color: red }
+.green      { color: green }
+.blue       { color: blue }
+.yellow     { color: yellow }
+.white      { color: white }
+.gray       { color: gray }
+.black      { color: black }
+
+/* ALIGN */
+
+.left       { text-align: left }
+.justify    { text-align: justify }
+.center     { text-align: center; text-indent: 0 }
+.centerleft { text-align: center; text-indent: 0 }
+.right      { text-align: right;  text-indent: 0 }
+
+/* LINE HEIGHT */
+
+body        { line-height: 1.5 }
+p           { margin: 0;
+	      text-indent: 2em }
+
+/* PAGINATION */
+
+.title, .subtitle     { page-break-after:  avoid }
+
+.container, .title, .subtitle, #pg-header
+                      { page-break-inside: avoid }
+
+/* SECTIONS */
+
+body         { text-align: justify }
+
+p.pfirst, p.noindent {
+    text-indent: 0
+}
+
+.boxed         { border: 1px solid black; padding: 1em }
+.topic, .note  { margin: 5% 0; border: 1px solid black; padding: 1em }
+div.section    { clear: both }
+
+div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+div.line-block.inner { margin: 0 0 0 10% }
+div.line             { margin-left: 20%; text-indent: -20%; }
+.line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+hr.docutils          { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+div.transition       { margin: 1.5em 0 }
+
+.vfill, .vspace      { border: 0px solid white }
+
+.title               { margin: 1.5em 0 }
+.title.with-subtitle { margin-bottom: 0 }
+.subtitle            { margin: 1.5em 0 }
+
+/* header font style */
+/* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+h1.title                        { font-size: 200%; }  /* for book title only */
+h2.title, p.subtitle.level-1    { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+h3.title, p.subtitle.level-2    { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+h4.title, p.subtitle.level-3    { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+h5.title, p.subtitle.level-4    { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+h6.title, p.subtitle.level-5    { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+/* title page */
+
+h1.title, p.subtitle.level-1,
+h2.title, p.subtitle.level-2    { text-align: center }
+
+#pg-header,
+h1.document-title               { margin: 10% 0 5% 0 }
+p.document-subtitle             { margin:  0  0 5% 0 }
+
+/* PG header and footer */
+#pg-machine-header { }
+#pg-produced-by { }
+
+li.toc-entry            { list-style-type: none }
+ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+.attribution            { margin-top: 1.5em }
+
+.example-rendered {
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+.literal-block.example-source   {
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+/* DROPCAPS */
+
+/* BLOCKQUOTES */
+
+blockquote { margin: 1.5em 10% }
+
+blockquote.epigraph { }
+
+blockquote.highlights { }
+
+div.local-contents { margin: 1.5em 10% }
+
+div.abstract { margin: 3em   10% }
+div.image    { margin: 1.5em  0  }
+div.caption  { margin: 1.5em  0 }
+div.legend   { margin: 1.5em  0 }
+
+.hidden { display: none }
+
+.invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+div.figure { margin-top: 3em; margin-bottom: 3em }
+
+img { max-width: 100% }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+ol.simple, ul.simple { margin: 1.5em 0 }
+
+ol.toc-list,    ul.toc-list    { padding-left:  0  }
+ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title, p.admonition-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+.literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+table.align-left, table.align-right { margin-top: 0 }
+
+table.table                { border-collapse: collapse; }
+
+table.table.hrules-table thead          { border: 1px solid black; border-width: 2px 0 0 }
+table.table.hrules-table tbody          { border: 1px solid black; border-width: 2px 0 }
+table.table.hrules-rows  tr             { border: 1px solid black; border-width: 0 0 1px }
+table.table.hrules-rows  tr.last        { border-width: 0 }
+table.table.hrules-rows  td,
+table.table.hrules-rows  th             { padding: 1ex 1em; vertical-align: middle }
+
+table.table tr             { border-width: 0 }
+table.table td,
+table.table th             { padding: 0.5ex 1em }
+table.table tr.first td    { padding-top: 1ex }
+table.table tr.last td     { padding-bottom: 1ex }
+table.table tr.first th    { padding-top: 1ex }
+table.table tr.last th     { padding-bottom: 1ex }
+
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 3em 4em }
+
+table.docutils { }
+
+div.footnote-group          { margin: 1em 0 }
+table.footnote td.label     { width: 2em; text-align: right; padding-left: 0 }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+</style>
+<style type="text/css">
+/*
+Project Gutenberg HTML docutils stylesheet.
+
+This stylesheet contains styles specific to HTML.
+*/
+
+/* FONTS */
+
+/* em                { font-style: normal }
+strong            { font-weight: normal } */
+
+.small-caps       { font-variant: small-caps }
+.gesperrt         { letter-spacing: 0.1em }
+
+/* ALIGN */
+
+.align-left       { clear: left;
+		    float: left;
+		    margin-right: 1em }
+
+.align-right      { clear: right;
+		    float: right;
+		    margin-left: 1em }
+
+.align-center     { margin-left: auto;
+		    margin-right: auto }
+
+div.shrinkwrap    { display: table; }
+
+/* SECTIONS */
+
+body              { margin: 5% 10% 5% 10% }
+
+/* compact list items containing just one p */
+li p.pfirst       { margin-top: 0; margin-bottom: 0 }
+
+.first            { margin-top: 0 !important;
+		    text-indent: 0 !important }
+.last             { margin-bottom: 0 !important }
+
+span.dropcap      { float: left; margin: 0 0.1em 0 0; line-height: 1 }
+img.dropcap       { float: left; margin: 0 0.5em 0 0; max-width: 25% }
+span.dropspan     { font-variant: small-caps }
+
+.no-page-break    { page-break-before: avoid !important }
+
+/* PAGINATION */
+
+.pageno           { position: absolute; right: 95%; font: medium sans-serif; text-indent: 0 }
+.pageno:after     { color: gray; content: '[' attr(title) ']' }
+.lineno           { position: absolute; left:  95%; font: medium sans-serif; text-indent: 0 }
+.lineno:after     { color: gray; content: '[' attr(title) ']' }
+.toc-pageref      { float: right }
+
+@media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, .dedication, .plainpage
+                       { margin: 10% 0; }
+
+   div.clearpage, div.cleardoublepage
+                       { margin: 10% 0; border: none; border-top: 1px solid gray; }
+
+   .vfill              { margin:  5% 10% }
+}
+
+@media print {
+   div.clearpage       { page-break-before: always; padding-top: 10% }
+   div.cleardoublepage { page-break-before: right;  padding-top: 10%  }
+
+   .vfill              { margin-top: 20% }
+   h2.title            { margin-top: 20% }
+}
+
+/* DIV */
+pre               { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+</style>
+<title>A Spring Harvest</title>
+<meta name="PG.Id" content="48371" />
+<meta name="PG.Reposted" content="2015-03-07 textual corrections made" />
+<meta name="PG.Credits" content="Based on scans by the British Library." />
+<link rel="coverpage" href="images/cover.jpg" />
+<meta name="PG.Producer" content="Andrew Dunning" />
+<meta name="DC.Title" content="A Spring Harvest" />
+<meta name="DC.Creator" content="Geoffrey Bache Smith" />
+<meta name="DC.Created" content="1918" />
+<meta name="DC.Language" content="en" />
+<meta name="PG.Rights" content="Public Domain" />
+<meta name="MARCREL.edt" content="John Ronald Reuel Tolkien" />
+<meta name="PG.Released" content="2015-02-26" />
+
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+<link rel="schema.MARCREL" href="http://id.loc.gov/vocabulary/relators/" />
+<meta content="A Spring Harvest" name="DCTERMS.title" />
+<meta content="/home/ajhaines/spring/spring-harvest.rst" name="DCTERMS.source" />
+<meta scheme="DCTERMS.RFC4646" content="en" name="DCTERMS.language" />
+<meta scheme="DCTERMS.W3CDTF" content="2015-03-07T22:20:55.000265+00:00" name="DCTERMS.modified" />
+<meta content="Project Gutenberg" name="DCTERMS.publisher" />
+<meta content="Public Domain in the USA." name="DCTERMS.rights" />
+<link rel="DCTERMS.isFormatOf" href="http://www.gutenberg.org/ebooks/48371" />
+<meta content="Geoffrey Bache Smith" name="DCTERMS.creator" />
+<meta content="John Ronald Reuel Tolkien" name="MARCREL.edt" />
+<meta scheme="DCTERMS.W3CDTF" content="2015-02-26" name="DCTERMS.created" />
+<meta content="width=device-width" name="viewport" />
+<meta content="Ebookmaker 0.4.0a5 by Marcello Perathoner &lt;webmaster@gutenberg.org&gt;" name="generator" />
+</head>
+<body>
+<div class="document" id="a-spring-harvest">
+<h1 class="center document-title level-1 pfirst title"><span class="x-large">A Spring Harvest</span></h1>
+
+<!-- this is the default PG-RST stylesheet -->
+<!-- figure and image styles for non-image formats -->
+<!-- default transition -->
+<!-- default attribution -->
+<!-- -*- encoding: utf-8 -*- -->
+<div class="clearpage">
+</div>
+<!-- -*- encoding: utf-8 -*- -->
+<div class="align-None container language-en pgheader" id="pg-header" xml:lang="en" lang="en">
+<p class="noindent pfirst"><span>This ebook is for the use of anyone anywhere in the United States
+and most other parts of the world at no cost and with almost no
+restrictions whatsoever. You may copy it, give it away or re-use it
+under the terms of the </span><a class="reference internal" href="#project-gutenberg-license">Project Gutenberg License</a><span> included with
+this ebook or online at </span><a class="reference external" href="http://www.gutenberg.org/license">http://www.gutenberg.org/license</a><span>. If you
+are not located in the United States, you'll have to check the laws
+of the country where you are located before using this ebook.</span></p>
+<p class="noindent pnext"></p>
+<div class="vspace" style="height: 2em">
+</div>
+<div class="align-None container" id="pg-machine-header">
+<p class="noindent pfirst"><span>Title: A Spring Harvest
+<br />
+<br />Author: Geoffrey Bache Smith
+<br />
+<br />Release Date: February 26, 2015 [EBook #48371]
+<br />Reposted: March 07, 2015 [textual corrections made]
+<br />
+<br />Language: English
+<br />
+<br />Character set encoding: UTF-8</span></p>
+</div>
+<div class="vspace" style="height: 2em">
+</div>
+<p class="noindent pfirst" id="pg-start-line"><span>*** START OF THIS PROJECT GUTENBERG EBOOK </span><span>A SPRING HARVEST</span><span> ***</span></p>
+<div class="vspace" style="height: 4em">
+</div>
+<p class="noindent pfirst" id="pg-produced-by"><span>Produced by Andrew Dunning.</span></p>
+<div class="vspace" style="height: 1em">
+</div>
+<p class="noindent pfirst"><span>Based on scans by the British Library.</span></p>
+</div>
+<div class="frontmatter">
+</div>
+<div class="align-None container coverpage">
+<div class="vfill">
+</div>
+<p class="center pfirst"><span class="pageno target" id="page-3" title="3"> </span><span class="large">A Spring Harvest</span></p>
+<div class="vfill">
+</div>
+</div>
+<div class="clearpage">
+</div>
+<div class="align-None container dedication">
+<p class="center pfirst"><span class="large pageno target" id="page-4" title="4"> </span><span class="large">To HIS MOTHER</span></p>
+</div>
+<div class="vfill">
+</div>
+<p class="pfirst"><span class="large">Geoffrey Bache Smith</span></p>
+<dl class="docutils">
+<dt><span>Born</span></dt>
+<dd><p class="first last pfirst"><span>October 18th, 1894</span></p>
+</dd>
+<dt><span>Entered Corpus Christi College, Oxford, as Exhibitioner</span></dt>
+<dd><p class="first last pfirst"><span>October 1913</span></p>
+</dd>
+<dt><span>Received Commission</span></dt>
+<dd><p class="first last pfirst"><span>January 1915</span></p>
+</dd>
+<dt><span>Died of wounds at Warlencourt, France</span></dt>
+<dd><p class="first last pfirst"><span>December 3rd, 1916</span></p>
+</dd>
+</dl>
+<div class="vfill">
+</div>
+<div class="clearpage">
+</div>
+<div class="align-None container titlepage">
+<p class="center pfirst"><span class="pageno target" id="page-5" title="5"> </span><span class="xx-large">A Spring Harvest</span></p>
+<div class="vspace" style="height: 6em">
+</div>
+<p class="center pfirst"><span>by</span></p>
+<p class="center pnext"><span class="x-large">Geoffrey Bache Smith</span></p>
+<p class="center pnext"><span>Late Lieutenant in the Lancashire Fusiliers</span></p>
+<div class="vfill">
+</div>
+<p class="center pfirst"><span class="large">Erskine Macdonald, Ltd.</span></p>
+<p class="center pnext"><span>London, W.C.1</span></p>
+</div>
+<div class="clearpage">
+</div>
+<div class="align-None container verso">
+<div class="vfill">
+</div>
+<p class="center pfirst"><span class="italics pageno target" id="page-6" title="6"> </span><span class="italics">All Rights Reserved</span></p>
+<p class="center pnext"><span class="italics">First published June 1918</span></p>
+<div class="vfill">
+</div>
+</div>
+<div class="clearpage">
+</div>
+<div class="level-2 section" id="note">
+<h2 class="level-2 pfirst section-title title"><span class="pageno target" id="page-7" title="7"> </span><span>Note</span></h2>
+<p class="pfirst"><span class="small-caps">The</span><span> poems of this book were written at very various times, one (“Wind over the Sea”) I believe even as early as 1910, but the order in which they are here given is not chronological beyond the fact that the third part contains only poems written after the outbreak of the war. Of these some were written in England (at Oxford in particular), some in Wales and very many during a year in France from November 1915 to December 1916, which was broken by one leave in the middle of May.</span></p>
+<p class="pnext"><span>“The Burial of Sophocles,” which is here placed at the end, was begun before the war and continued at odd times and in various circumstances afterwards; the final version was sent me from the trenches.</span></p>
+<p class="pnext"><span>Beyond these few facts no prelude and no </span><em class="italics">envoi</em><span> is needed other than those here printed as their author left them.</span></p>
+<p class="pnext right"><span>J. R. R. T.</span></p>
+<p class="pnext"><span>1918.</span></p>
+<div class="cleardoublepage">
+</div>
+<!-- [pg 8] -->
+</div>
+<div class="level-2 section" id="contents">
+<h2 class="level-2 pfirst section-title title"><span class="pageno target" id="page-9" title="9"> </span><span>Contents</span></h2>
+<div class="container contents">
+<ul class="compact simple toc-list">
+<li class="level-2 toc-entry"><p class="first pfirst"><a class="reference internal" href="#note" id="id3">Note</a><span class="toc-pageref"> 7</span></p>
+</li>
+<li class="level-2 toc-entry"><p class="first pfirst"><a class="reference internal" href="#contents" id="id4">Contents</a><span class="toc-pageref"> 9</span></p>
+</li>
+<li class="level-2 toc-entry"><p class="first pfirst"><a class="reference internal" href="#i-two-legends" id="id7">I. Two Legends</a><span class="toc-pageref"> 13</span></p>
+<ul class="compact toc-list">
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#glastonbury" id="id5">Glastonbury</a><span class="toc-pageref"> 13</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#legend" id="id6">Legend</a><span class="toc-pageref"> 21</span></p>
+</li>
+</ul>
+</li>
+<li class="level-2 toc-entry"><p class="first pfirst"><a class="reference internal" href="#ii-first-poems" id="id32">II. First Poems</a><span class="toc-pageref"> 24</span></p>
+<ul class="compact toc-list">
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#rime" id="id8">Rime</a><span class="toc-pageref"> 24</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#to-an-elzevir-cicero" id="id9">To an Elzevir Cicero</a><span class="toc-pageref"> 26</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#to-a-durer-drawing-of-antwerp-harbour" id="id10">To a Dürer Drawing of Antwerp Harbour</a><span class="toc-pageref"> 27</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#pure-virginia" id="id11">Pure Virginia</a><span class="toc-pageref"> 28</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#a-preface-for-a-tale-i-have-never-told" id="id12">A Preface for a Tale I have never told</a><span class="toc-pageref"> 29</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#a-sonnet" id="id13">A Sonnet</a><span class="toc-pageref"> 30</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#it-was-all-in-the-black-countree" id="id14">“It was all in the Black Countree”</a><span class="toc-pageref"> 31</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#to-a-pianist" id="id15">To a Pianist</a><span class="toc-pageref"> 32</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#a-fragment" id="id16">A Fragment</a><span class="toc-pageref"> 33</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#sea-poppies" id="id17">Sea Poppies</a><span class="toc-pageref"> 34</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#o-sing-me-a-song-of-the-wild-west-wind" id="id18">“O, sing me a Song of the Wild West Wind”</a><span class="toc-pageref"> 35</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#aere-perennius" id="id19">Ære Perennius</a><span class="toc-pageref"> 36</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#the-old-kings" id="id20">The Old Kings</a><span class="toc-pageref"> 37</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#o-there-be-kings-whose-treasuries" id="id21">“O there be Kings whose Treasuries”</a><span class="toc-pageref"> 38</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#a-study" id="id22">A Study</a><span class="toc-pageref"> 39</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#the-eremite" id="id23">The Eremite</a><span class="toc-pageref"> 40</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#the-house-of-eld" id="id24">The House of Eld</a><span class="toc-pageref"> 41</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#the-south-west-wind" id="id25">The South-west Wind</a><span class="toc-pageref"> 42</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#schumann-erstes-verlust" id="id26">Schumann: Erstes Verlust</a><span class="toc-pageref"> 43</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#dark-boughs-against-a-golden-sky" id="id27">“Dark Boughs against a Golden Sky”</a><span class="toc-pageref"> 44</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#wind-of-the-darkness" id="id28">“Wind of the Darkness”</a><span class="toc-pageref"> 45</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#creator-spiritus" id="id29">Creator Spiritus</a><span class="toc-pageref"> 46</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#wind-over-the-sea" id="id30">Wind over the Sea</a><span class="toc-pageref"> 47</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#songs-on-the-downs" id="id31">Songs on the Downs</a><span class="toc-pageref"> 48</span></p>
+</li>
+</ul>
+</li>
+<li class="level-2 toc-entry"><p class="first pfirst"><a class="reference internal" href="#iii-last-poems-and-the-burial-of-sophocles" id="id57">III. Last Poems and “The Burial of Sophocles”</a><span class="toc-pageref"> 49</span></p>
+<ul class="compact toc-list">
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#we-who-have-bowed-ourselves-to-time" id="id33">“We who have bowed ourselves to Time”</a><span class="toc-pageref"> 49</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#anglia-valida-in-senectute" id="id34">Anglia Valida in Senectute</a><span class="toc-pageref"> 50</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#dark-is-the-world-our-fathers-left-us" id="id35">“Dark is the World our Fathers left us”</a><span class="toc-pageref"> 51</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#awakening" id="id36">Awakening</a><span class="toc-pageref"> 52</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#ave-atque-vale" id="id37">Ave atque Vale</a><span class="toc-pageref"> 53</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#o-one-came-down-from-seven-hills" id="id38">“O, one came down from Seven Hills”</a><span class="toc-pageref"> 55</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#sonnet-to-the-british-navy" id="id39">Sonnet to the British Navy</a><span class="toc-pageref"> 57</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#the-last-meeting" id="id40">The Last Meeting</a><span class="toc-pageref"> 58</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#the-new-age-and-the-old" id="id41">The New Age and the Old</a><span class="toc-pageref"> 59</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#to-the-cultured" id="id42">To the Cultured</a><span class="toc-pageref"> 60</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#afterwards" id="id43">Afterwards</a><span class="toc-pageref"> 61</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#domum-redit-poeta" id="id44">Domum redit Poeta</a><span class="toc-pageref"> 62</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#memories" id="id45">Memories</a><span class="toc-pageref"> 63</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#intercessional" id="id46">Intercessional</a><span class="toc-pageref"> 64</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#april-1916" id="id47">April 1916</a><span class="toc-pageref"> 65</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#over-the-hills-and-hollows-green" id="id48">“Over the Hills and Hollows Green”</a><span class="toc-pageref"> 66</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#sonnet" id="id49">Sonnet</a><span class="toc-pageref"> 67</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#o-long-the-fiends-of-war-shall-dance" id="id50">“O Long the Fiends of War shall dance”</a><span class="toc-pageref"> 68</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#for-r-q-g" id="id51">For R. Q. G.</a><span class="toc-pageref"> 69</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#sun-and-shadow-and-winds-of-spring" id="id52">“Sun and Shadow and Winds of Spring”</a><span class="toc-pageref"> 70</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#let-us-tell-quiet-stories-of-kind-eyes" id="id53">“Let us tell Quiet Stories of Kind Eyes”</a><span class="toc-pageref"> 71</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#save-that-poetic-fire" id="id54">“Save that Poetic Fire”</a><span class="toc-pageref"> 72</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#the-burial-of-sophocles" id="id55">The Burial of Sophocles</a><span class="toc-pageref"> 73</span></p>
+</li>
+<li class="level-3 toc-entry"><p class="first pfirst"><a class="reference internal" href="#so-we-lay-down-the-pen" id="id56">“So we lay down the Pen”</a><span class="toc-pageref"> 78</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="mainmatter">
+</div>
+<div class="clearpage">
+</div>
+<div class="line-block outermost">
+<div class="line"><span class="pageno target" id="page-11" title="11"> </span><span class="small-caps">If</span><span> there be one among the Muses nine</span></div>
+<div class="line"><span>Loves not so much </span><em class="italics">Completion</em><span> as </span><em class="italics">the Will</em><span>,</span></div>
+<div class="line"><span>And less the austere saint than the fond sinner:</span></div>
+<div class="line"><span>Loves scanty ruins, garlanded with years,</span></div>
+<div class="line"><span>Better than lofty palaces entire:</span></div>
+<div class="line"><span>To her I dedicate this spoiléd sheaf</span></div>
+<div class="line"><span>Of rime that scarcely came to harvesting.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>There is a window here in Magdalen</span></div>
+<div class="line"><span>Composite, methinks, of fragments that stark Mars</span></div>
+<div class="line"><span>Has scattered. Even so my verses be</span></div>
+<div class="line"><span>Composite of memories and half-uttered dreams</span></div>
+<div class="line"><span>Welded together sans due ordinance,</span></div>
+<div class="line"><span>Which might have been far other, but that Mars</span></div>
+<div class="line"><span>Scattered and harried them with his ruthless flail.</span></div>
+</div>
+<div class="cleardoublepage">
+</div>
+<!-- [pg 12] -->
+</div>
+<div class="level-2 section" id="i-two-legends">
+<h2 class="level-2 pfirst section-title title"><span class="pageno target" id="page-13" title="13"> </span><span>I. Two Legends</span></h2>
+<div class="level-3 section" id="glastonbury">
+<h3 class="level-3 pfirst section-title title"><span>Glastonbury</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Thither</span><span> through moaning woods came Bedivere,</span></div>
+<div class="line"><span>At gloomy breaking of a winter’s day,</span></div>
+<div class="line"><span>Weary and travel-stained and sick at heart,</span></div>
+<div class="line"><span>With a great wound gotten in that last fray</span></div>
+<div class="line"><span>Ere he stood by, and watched the King depart</span></div>
+<div class="line"><span>Down the long, silent reaches of the mere:</span></div>
+<div class="line"><span>And all the earth was sad, and skies were drear,</span></div>
+<div class="line"><span>And the wind cried, and chased the relict leaves</span></div>
+<div class="line"><span>Like ships, that the storm-tossed ocean batters and heaves,</span></div>
+<div class="line"><span>And they fly before the gale, and the mariners fear.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>So he found at the last an hermitage</span></div>
+<div class="line"><span>Hard by a little hill, and sheltering trees</span></div>
+<div class="line"><span>That bent gaunt branches in the winter’s breeze;</span></div>
+<div class="line"><span>And he drew rein, and leant, and struck the door:</span></div>
+<div class="line"><span>Then presently came forth an hermit sage</span></div>
+<div class="line"><span>And helped him to dismount with labour sore:</span></div>
+<div class="line"><span>Straight went they in, but Bedivere being lame</span></div>
+<div class="line"><span>Stumbled against the open door, and swooned,</span></div>
+<div class="line"><span>And would have fallen, but the hermit caught</span></div>
+<div class="line"><span>And laid him gently down; then hurrying brought</span></div>
+<div class="line"><span>From a great chest a cordial, and came</span></div>
+<div class="line"><span>That he might drink, and so beheld his wound.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Long time lay Bedivere betwixt life and death,</span></div>
+<div class="line"><span>Like a torn traveller on a stormy height</span></div>
+<div class="line"><span>’Twixt one wind and another: till his breath</span></div>
+<div class="line"><span>Came easier, and he prospered. Then did sleep</span></div>
+<div class="line"><span>Bathe him in soothing waters, soft and deep,</span></div>
+<div class="line"><span>And left him whole, at breaking of the light,</span></div>
+<div class="line"><span>So he beheld the old man, and desired</span></div>
+<div class="line"><span>That he would tell of whom he was, and whence.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span class="pageno target" id="page-14" title="14"> </span><span>Whereat once more the ancient eyes were fired:</span></div>
+<div class="line"><span>“I, I was Arthur’s bishop, at his court</span></div>
+<div class="line"><span>And in his church I ministered, and thence</span></div>
+<div class="line"><span>When at the last the whole was overthrown</span></div>
+<div class="line"><span>With wrath and ill designings, straight I sought</span></div>
+<div class="line"><span>A place where I might die, too feeble grown</span></div>
+<div class="line"><span>To endure a new beginning to my years</span></div>
+<div class="line"><span>When once the past was lost, and whelmed in tears.</span></div>
+<div class="line"><span>Hither I came, where, in the dawns of time</span></div>
+<div class="line"><span>Dim peoples, that the very stones forget,</span></div>
+<div class="line"><span>Lived, loved, and fought, and wove the riddling rime</span></div>
+<div class="line"><span>On a lake island mystically set.</span></div>
+<div class="line"><span>They passed, and after ages manifold</span></div>
+<div class="line"><span>Came wandering sainted Joseph (even he</span></div>
+<div class="line"><span>That tended God’s frail body, and enrolled</span></div>
+<div class="line"><span>In linen clothes of spicèd fragrancy).</span></div>
+<div class="line"><span>He brought the vessel, vanished now from earth</span></div>
+<div class="line"><span>That wrought destruction to the Table Round,</span></div>
+<div class="line"><span>Since many deemed themselves above their worth</span></div>
+<div class="line"><span>And sought in vain, and perished ere they found.”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Then Bedivere: “Alas the King! I saw</span></div>
+<div class="line"><span>The unstayed overwhelming tide of war:</span></div>
+<div class="line"><span>And when the opposèd standards were unfurled</span></div>
+<div class="line"><span>Of Arthur and of Mordred, his base son,</span></div>
+<div class="line"><span>Ere yet the noise of battle was begun</span></div>
+<div class="line"><span>I heard the heralds crying to the world:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>“‘Ye that have sought out pallid harmonies</span></div>
+<div class="line"><span>Where never wind blows, save the gentle south:</span></div>
+<div class="line"><span>Ye that have trafficked on the sounding seas</span></div>
+<div class="line"><span>And fear nor cheerless rains, nor scorching drouth:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>“‘Ye that have piled the rich, full-ripened crops</span></div>
+<div class="line"><span>Of word and measure, till the rime, grown proud,</span></div>
+<div class="line"><span>Did straight contemn the leaping mountain tops</span></div>
+<div class="line"><span>And lose itself in air, and riven cloud:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span class="pageno target" id="page-15" title="15"> </span><span>“‘Ye that have lived a dangerous life of war</span></div>
+<div class="line"><span>Whose speech has been bold words and heady boasts</span></div>
+<div class="line"><span>Gather, for strife and death unknown before,</span></div>
+<div class="line"><span>Come gather all unto the fronting hosts.’</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>“I saw the last dim battle in the mist</span></div>
+<div class="line"><span>There, where a dreary waste of barren sand</span></div>
+<div class="line"><span>Doth mark the ultimate leagues of this fair land;</span></div>
+<div class="line"><span>Scarce we beheld the foe we struck, or wist</span></div>
+<div class="line"><span>Which party had advantage: like thin wraiths</span></div>
+<div class="line"><span>Fit to throng Lethe banks the warriors</span></div>
+<div class="line"><span>Struck and o’ercame, or fell, unseen, unwept;</span></div>
+<div class="line"><span>And alien hopes, lives, peoples, alien faiths</span></div>
+<div class="line"><span>Were all confounded on those desolate shores.</span></div>
+<div class="line"><span>And ever the mist seethed, and the waves kept</span></div>
+<div class="line"><span>A hollow chanting, as they mourned the end</span></div>
+<div class="line"><span>Of all mankind, and of created time.</span></div>
+<div class="line"><span>How many fell therein of foe or friend</span></div>
+<div class="line"><span>I know not, save that when the darkness came</span></div>
+<div class="line"><span>And the mist cleared, I found at last the King,</span></div>
+<div class="line"><span>His armour and visage fouled with blood and slime,</span></div>
+<div class="line"><span>And fading in his eyes the ancient flame.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>“I saw him make on Mordred with his spear,</span></div>
+<div class="line"><span>And crying ‘Tide me death, betide me life,</span></div>
+<div class="line"><span>He shall not live, that wrought the accursed thing,’</span></div>
+<div class="line"><span>Put a dread ending to the outworn strife.</span></div>
+<div class="line"><span>I saw them fall together, and, drawn near.</span></div>
+<div class="line"><span>Knew that the King was wounded unto death.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>“Then as he drew with growing pain his breath</span></div>
+<div class="line"><span>I looked, and saw a long, black barge that stole</span></div>
+<div class="line"><span>Across the waters, like a wandering soul</span></div>
+<div class="line"><span>Returnèd from the woeful realm, to view</span></div>
+<div class="line"><span>The ancient haunts well-loved that once it knew.</span></div>
+<div class="line"><span>And when it touched the shallows I did bear</span></div>
+<div class="line"><span>The dying Arthur as he bade, and there</span></div>
+<div class="line"><span class="pageno target" id="page-16" title="16"> </span><span>I placed him ’mid dark forms: I could not tell</span></div>
+<div class="line"><span>Whose they might be; and wept, and breathed farewell.”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Then spake the eremite: “Beyond yon door</span></div>
+<div class="line"><span>There stands a chapel, ancient and weatherworn,</span></div>
+<div class="line"><span>And there did worship in the days of yore</span></div>
+<div class="line"><span>The sons of kings. The night ere you came hither</span></div>
+<div class="line"><span>I was awakened by the sound of feet.</span></div>
+<div class="line"><span>And I looked forth, and saw a body borne</span></div>
+<div class="line"><span>By veilèd figures straight, as they knew whither,</span></div>
+<div class="line"><span>In at the chapel gateway. I went down</span></div>
+<div class="line"><span>And found that they had digged a grave, most meet</span></div>
+<div class="line"><span>For one of saintly life, or king by birth:</span></div>
+<div class="line"><span>They seemed some score, and by blown candles’ light</span></div>
+<div class="line"><span>I saw that each with tears bedewed his gown</span></div>
+<div class="line"><span>Ere sank the corse into the waiting earth,</span></div>
+<div class="line"><span>Then prayed, and so went out into the night.”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Thereon the twain arose, and went straightway</span></div>
+<div class="line"><span>Toward the old, dim chapel, and beheld</span></div>
+<div class="line"><span>The stone beneath whose length the body lay:</span></div>
+<div class="line"><span>Kneeling they closely scanned it all, and spelled</span></div>
+<div class="line"><span>Graven in golden character, </span><span class="small-caps">“Arcturus</span></div>
+<div class="line"><span class="small-caps">Rex Quondamque Futurus.”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>                                    Quoth Bedivere:</span></div>
+<div class="line"><span>“Thank God this voice remaineth unto us;</span></div>
+<div class="line"><span>Now I do mind me of a prophecy</span></div>
+<div class="line"><span>Spoken long since in some emblazoned year,</span></div>
+<div class="line"><span>How Arthur should escape mortality</span></div>
+<div class="line"><span>And lie beneath the hills, in cavern deep</span></div>
+<div class="line"><span>Or on some shore, where faery seas do break:</span></div>
+<div class="line"><span>Around him all his warriors shall sleep,</span></div>
+<div class="line"><span>Who at a great bell’s sounding shall awake</span></div>
+<div class="line"><span>What time th’ old enemy spreads death and harm</span></div>
+<div class="line"><span>Thorough his ancient realm, and the last woes</span></div>
+<div class="line"><span>Go over her; his own victorious arm</span></div>
+<div class="line"><span>Shall rid the stricken land of hate and foes.”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span class="pageno target" id="page-17" title="17"> </span><span>So leave we them, each head inaureoled</span></div>
+<div class="line"><span>With the awakening spring’s young sunlight-gold.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Then, on an evening, hurrying footsteps rung</span></div>
+<div class="line"><span>Without the door, and straight ’twas open flung,</span></div>
+<div class="line"><span>They saw who stood therein, and each one knew</span></div>
+<div class="line"><span>The face unspared by years and strife and shame,</span></div>
+<div class="line"><span>Pale as the moon is pale on winter nights,</span></div>
+<div class="line"><span>With deep eyes dreaming like September haze,</span></div>
+<div class="line"><span>Or lit with lust of battle, eyes that few</span></div>
+<div class="line"><span>Had looked on and forgot; in such wise came</span></div>
+<div class="line"><span>Lancelot, the hero of immortal fights,</span></div>
+<div class="line"><span>Lancelot, the golden knight of golden days.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>“Whence cam’st thou, Lancelot?” “Even from the</span></div>
+<div class="line"><span>    Queen,</span></div>
+<div class="line"><span>The Queen that was, whom now a convent’s shade</span></div>
+<div class="line"><span>Imprisons, and a dark and tristful veil</span></div>
+<div class="line"><span>Enwraps those brows, that in old days were seen</span></div>
+<div class="line"><span>Most puissant proud of all that ever made</span></div>
+<div class="line"><span>The traitor honest, and the valorous frail.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>“Yet evermore about her form there clings</span></div>
+<div class="line"><span>And evermore shall cling, the ancient grace,</span></div>
+<div class="line"><span>Like evening sunlight lingering on the mere:</span></div>
+<div class="line"><span>And till the end of all created things</span></div>
+<div class="line"><span>There shall be some one found, shall strive to trace</span></div>
+<div class="line"><span>The immortal loveliness of Guinevere.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>“Shall I not mind me of old ecstasies</span></div>
+<div class="line"><span>In Camelot, beneath the ancient walls,</span></div>
+<div class="line"><span>In shady paths, and marble terraces</span></div>
+<div class="line"><span>Rose-fragrant, where eternal sunlight falls.</span></div>
+<div class="line"><span>But ah! the last long kiss is ta’en and given,</span></div>
+<div class="line"><span>And the last look in those unfathomed eyes,</span></div>
+<div class="line"><span>The passionate last embrace is coldly riven,</span></div>
+<div class="line"><span>And all is grief, beneath the pitiless skies.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span class="pageno target" id="page-18" title="18"> </span><span>“Gods of the burnt-out hearth, the wandered wind,</span></div>
+<div class="line"><span>Gods of pale dawns that vanished long ago,</span></div>
+<div class="line"><span>Gods of the barren tree, the withered leaf.</span></div>
+<div class="line"><span>The faded flower, and the ungarnered sheaf,</span></div>
+<div class="line"><span>Gods half-forgot in the wild ages’ flow</span></div>
+<div class="line"><span>Yours, yours am I, that all for nought have sinned.”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Spring, summer passed away, and autumn rain</span></div>
+<div class="line"><span>Swelled the lean brooks, until the gelid year</span></div>
+<div class="line"><span>Shot forth its icy hand, and grasped again.</span></div>
+<div class="line"><span>Again the hanging clouds were struck and furled</span></div>
+<div class="line"><span>By winds of winter, until skies were clear,</span></div>
+<div class="line"><span>And there was frost o’ nights, and all the world</span></div>
+<div class="line"><span>Lay glistening to the newly risen sun.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Till came that season, wherein solemn days</span></div>
+<div class="line"><span>Do celebrate the reign on earth begun</span></div>
+<div class="line"><span>Of the most blessèd Child, whenas all ways</span></div>
+<div class="line"><span>Were bound, and all the fields were white with snow.</span></div>
+<div class="line"><span>Then in the chapel at high noon they three</span></div>
+<div class="line"><span>Offered their quiet orisons and so</span></div>
+<div class="line"><span>Came forth and looked upon the purity,</span></div>
+<div class="line"><span>And when he saw the fields all stainless-white</span></div>
+<div class="line"><span>Lancelot groaned in spirit, and spake: “How sore</span></div>
+<div class="line"><span>And no wise joyous to a sinner’s sight</span></div>
+<div class="line"><span>Is this dear land, where the snow lies untrod.</span></div>
+<div class="line"><span>Even so once before the eyes of God</span></div>
+<div class="line"><span>My soul lay all unspotted; now no more.”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>“Courage, my son, and patience,” quoth the sage;</span></div>
+<div class="line"><span>No sin there is, that shall not lose its stain</span></div>
+<div class="line"><span>Through the great love of God, and His dear Son.</span></div>
+<div class="line"><span>Repent and be forgiven: know that none</span></div>
+<div class="line"><span>Shall sue before His throne, and sue in vain,</span></div>
+<div class="line"><span>Nor shall one name be blotted from the page</span></div>
+<div class="line"><span>If he that bears it turn to prayer and tears.”</span></div>
+</div>
+<!-- Source has a comma at end of third line above. (AD) -->
+<div class="line-block outermost">
+<div class="line"><span class="pageno target" id="page-19" title="19"> </span><span>Then Lancelot: “Though through the tale of years</span></div>
+<div class="line"><span>That still are left before the longed-for earth</span></div>
+<div class="line"><span>Receive my body, I should strive amain</span></div>
+<div class="line"><span>To slay myself, and gain regenerate birth,</span></div>
+<div class="line"><span>Alas it were all profitless and vain.</span></div>
+<div class="line"><span>Verily, when I came unto this place</span></div>
+<div class="line"><span>I railed on God, that I had lost my soul</span></div>
+<div class="line"><span>And nothing gained: until a heavenly grace</span></div>
+<div class="line"><span>Enwrapped me, like some sick man made half whole,</span></div>
+<div class="line"><span>And now my grief is only for old sin.</span></div>
+<div class="line"><span>But ah, what boots it? Lo, this barren tree</span></div>
+<div class="line"><span>(He touched a shrub that grew beside the door),</span></div>
+<div class="line"><span>This tree, methinks, shall bud and blossom before</span></div>
+<div class="line"><span>I pass the gates divine, and enter in</span></div>
+<div class="line"><span>To the fair country I must never see.”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>But even as he spoke, the hand of God</span></div>
+<div class="line"><span>Worked on the sombre branches, and straightway</span></div>
+<div class="line"><span>They were all green with sap, and bud, and leaf,</span></div>
+<div class="line"><span>As at the very bidding of the spring,</span></div>
+<div class="line"><span>Burst forth, and soon each tender branch was gay</span></div>
+<div class="line"><span>With flowers that nodded in the winter’s breeze</span></div>
+<div class="line"><span>(So blossomed in old time the prophet’s rod),</span></div>
+<div class="line"><span>And Lancelot stood and saw the wondrous thing.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Then softly spake the hermit, “Now is grief</span></div>
+<div class="line"><span>Reproved, and sorrow cast out with the lees;</span></div>
+<div class="line"><span>For God beholds the living, not the dead;</span></div>
+<div class="line"><span>And He that took the semblance of a child</span></div>
+<div class="line"><span>Loves He but penance, and the drooping head,</span></div>
+<div class="line"><span>Has He not sung for joy, has He not smiled?”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>So they grew old together, and the years</span></div>
+<div class="line"><span>Pressed no more to their lips the cup of tears</span></div>
+<div class="line"><span>(They had drained all, maybe). And ever less</span></div>
+<div class="line"><span>Seemed all things mortal, as in quietness</span></div>
+<div class="line"><span>They pondered the eternal mysteries</span></div>
+<div class="line"><span>(The noblest heritage of all men born),</span></div>
+<div class="line"><span class="pageno target" id="page-20" title="20"> </span><span>Such as are writ upon the face of dawn,</span></div>
+<div class="line"><span>Or in the glamour of a moonlit night,</span></div>
+<div class="line"><span>Or in the autumn swallow’s southern flight,</span></div>
+<div class="line"><span>Or in the breaking of the restless seas:</span></div>
+<div class="line"><span>Or dreamed rich, hallowed dreams of aureate days</span></div>
+<div class="line"><span>While yet the King was young, and sunlight fell</span></div>
+<div class="line"><span>On bower and roof of ancient Camelot:</span></div>
+<div class="line"><span>Of triumph clarion, and thanksgiving bell,</span></div>
+<div class="line"><span>When all was song, and laughter, and high praise,</span></div>
+<div class="line"><span>Even when as yet the accursed thing was not.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Then would loom out from the chill mists of time</span></div>
+<div class="line"><span>The faces and the forms remembered still,</span></div>
+<div class="line"><span>The King and Guinevere, and Galahad,</span></div>
+<div class="line"><span>That rode upon a peerless quest and dire,</span></div>
+<div class="line"><span>Kay, swift and hasty as a flame of fire,</span></div>
+<div class="line"><span>And gentle Percival, whom to give made glad;</span></div>
+<div class="line"><span>Merlin, contriver of the riddling rime,</span></div>
+<div class="line"><span>And Gawain, silent harbinger of ill.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>So as the day draws ever toward the dark,</span></div>
+<div class="line"><span>Ever toward peace the great wind’s sounding breath,</span></div>
+<div class="line"><span>And ever toward the further shore the bark</span></div>
+<div class="line"><span>They drew to the dark, silent realm of death.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Far, far away from their old palace-halls</span></div>
+<div class="line"><span>Where once they lived a splendid life and vain,</span></div>
+<div class="line"><span>That now are scattered stones and crumbled walls</span></div>
+<div class="line"><span>In some soft vale, or by the echoing main,</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Beneath the springing grass, and very deep</span></div>
+<div class="line"><span>They three do lie, where never mornings rise</span></div>
+<div class="line"><span>To ope the portals of their dazèd eyes,</span></div>
+<div class="line"><span>Nor ever mortal footstep breaks their sleep,</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>And near beside lies Arthur, even he</span></div>
+<div class="line"><span>That was King once, and yet again shall be.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="legend">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-21" title="21"> </span><span>Legend</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Grey,</span><span> ancient abbeys, you may see them yet,</span></div>
+<div class="line"><span>In that high plain above the western sea:</span></div>
+<div class="line"><span>A broken arch or two, a few worn stones</span></div>
+<div class="line"><span>Piled one upon another, and for paving</span></div>
+<div class="line"><span>Uneven fragments with tall grass between:</span></div>
+<div class="line"><span>Grass that is always green, winter and summer,</span></div>
+<div class="line"><span>The grass that grows on long-forgotten graves.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>It was a springtime morning long ago,</span></div>
+<div class="line"><span>A morning of blue skies and whitest clouds,</span></div>
+<div class="line"><span>And singing birds, and singing streams, and woods</span></div>
+<div class="line"><span>That shone like silver, yet untouched with green:</span></div>
+<div class="line"><span>The brethren of an abbey of the plain</span></div>
+<div class="line"><span>—Whereof what now is ruin yet was whole—</span></div>
+<div class="line"><span>Were labouring as holy brethren must,</span></div>
+<div class="line"><span>Quietly, and in peace: and elder ones</span></div>
+<div class="line"><span>Paced in the cloister, and some, older still,</span></div>
+<div class="line"><span>Too old to work or dream, sat in the sunlight,</span></div>
+<div class="line"><span>The sunlight which they soon should see no more.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>And there came from the wood upon the hill</span></div>
+<div class="line"><span>One clothed in the sere habit of a monk,</span></div>
+<div class="line"><span>That passed in at the portal of the abbey:</span></div>
+<div class="line"><span>Brighter his face than is the face of spring,</span></div>
+<div class="line"><span>And joy was in his tread, as in his soul.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>And some that paced the cloister paused to glance</span></div>
+<div class="line"><span>    at him,</span></div>
+<div class="line"><span>And one that went upon an errand stayed,</span></div>
+<div class="line"><span>And some that laboured left their work, and came</span></div>
+<div class="line"><span>Gathering round him, and he spake, and said:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span class="pageno target" id="page-22" title="22"> </span><span>    “Very fair the golden morning</span></div>
+<div class="line"><span>        As in yonder wood I strayed,</span></div>
+<div class="line"><span>    And I heard diviner music</span></div>
+<div class="line"><span>        Than the greatest harpers made,</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>    For a sweet bird sang before me</span></div>
+<div class="line"><span>        Songs of laughter, and of tears.</span></div>
+<div class="line"><span>    All that I have loved and longed for,</span></div>
+<div class="line"><span>        As I measured out my years.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>    Sang of blessed shores and golden</span></div>
+<div class="line"><span>        Where the old, dim heroes be,</span></div>
+<div class="line"><span>    Distant isles of sunset glory,</span></div>
+<div class="line"><span>        Set beyond the western sea.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>    Sang of Christ and Mary Mother</span></div>
+<div class="line"><span>        Hearkening unto angels seven</span></div>
+<div class="line"><span>    Playing on their golden harp-strings</span></div>
+<div class="line"><span>        In the far courts of high Heaven.”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>So they stood by, and listened to his speech,</span></div>
+<div class="line"><span>Rhythmic, for that great joy was in his soul:</span></div>
+<div class="line"><span>But while they wondered whence he was, and who,</span></div>
+<div class="line"><span>He cast his eyes around, and, shuddering, cried:</span></div>
+<div class="line"><span>“Who are ye, that I thought to be my brothers?</span></div>
+<div class="line"><span>Strangers and sons of strangers! Where are they</span></div>
+<div class="line"><span>I left behind me but an hour ago?”</span></div>
+<div class="line"><span>Then was there whispering among the throng,</span></div>
+<div class="line"><span>And wonder not a little, and some scorn;</span></div>
+<div class="line"><span>Till he that spake, with anguish in his eye,</span></div>
+<div class="line"><span>Cried: “Take me to a cell, that I may pray.”</span></div>
+<div class="line"><span>’Twas done, and in the golden afternoon</span></div>
+<div class="line"><span>A brother entered, and found none within,</span></div>
+<div class="line"><span>Only a sere monk’s habit, and much dust,</span></div>
+<div class="line"><span>As of a body crumbled in the grave.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span class="pageno target" id="page-23" title="23"> </span><span>And while they wondered what these things might be,</span></div>
+<div class="line"><span>At last spake forth the oldest of them all,</span></div>
+<div class="line"><span>Burdened with hundred winters in his soul:</span></div>
+<div class="line"><span>“I can remember, when my years were young,</span></div>
+<div class="line"><span>Hearing the old monks say, one went from here</span></div>
+<div class="line"><span>When spring was on the earth, as it is now,</span></div>
+<div class="line"><span>Some five-score years ago, and was not seen</span></div>
+<div class="line"><span>Again, though search was made in all the land.”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>And some believed this was the same, and all</span></div>
+<div class="line"><span>Forgot it in a sennight’s silent toil.</span></div>
+<div class="line"><span>Save one, that saw, and seeing understood,</span></div>
+<div class="line"><span>And for the greater glory of High God</span></div>
+<div class="line"><span>Wrote down the story in a mighty book,</span></div>
+<div class="line"><span>And limned the old saint hearkening to the bird</span></div>
+<div class="line"><span>With bright hues, and you still may read and see.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+</div>
+<div class="level-2 section" id="ii-first-poems">
+<h2 class="level-2 pfirst section-title title"><span class="pageno target" id="page-24" title="24"> </span><span>II. First Poems</span></h2>
+<div class="level-3 section" id="rime">
+<h3 class="level-3 pfirst section-title title"><span>Rime</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">O scholar</span><span> grey, with quiet eyes,</span></div>
+<div class="line"><span>Reading the charactered pages, bright</span></div>
+<div class="line"><span>With one tall candle’s flickering light,</span></div>
+<div class="line"><span>In a turret chamber under the skies;</span></div>
+<div class="line"><span>O scholar, learned in gramarye,</span></div>
+<div class="line"><span>Have you seen the manifold things I see?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Have you seen the forms of tracèd towers</span></div>
+<div class="line"><span>Whence clamorous voices challenge the hours:</span></div>
+<div class="line"><span>Gaunt tree-branches, pitchy black</span></div>
+<div class="line"><span>Against the long, wind-driven wrack</span></div>
+<div class="line"><span>Of scurrying, shuddering clouds, that race</span></div>
+<div class="line"><span>Ever across the pale moon’s face?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Have you heard the tramp of hurrying feet.</span></div>
+<div class="line"><span>There beneath, in the shadowy street,</span></div>
+<div class="line"><span>Have you heard sharp cries, and seen the flame</span></div>
+<div class="line"><span>Of silvery steel, in a perilous game,</span></div>
+<div class="line"><span>A perilous game for men to play,</span></div>
+<div class="line"><span>Hid from the searching eyes of day?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Have you heard the great awakening breath,</span></div>
+<div class="line"><span>Like trump that summons the saints from death,</span></div>
+<div class="line"><span>Of the wild, majestical wind, which blows</span></div>
+<div class="line"><span>Loud and splendid, that each man knows</span></div>
+<div class="line"><span>Far, O far away is the sea,</span></div>
+<div class="line"><span>Breaking, murmuring, stark and free?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span class="pageno target" id="page-25" title="25"> </span><span>All these things I hear and see,</span></div>
+<div class="line"><span>I, a scholar of gramarye:</span></div>
+<div class="line"><span>All are writ in the ancient books</span></div>
+<div class="line"><span>Clear, exactly, and he that looks</span></div>
+<div class="line"><span>Finds the night and the changing sea,</span></div>
+<div class="line"><span>The years gone by, and the years to be:</span></div>
+<div class="line"><span>(He that searches, with tireless eyes</span></div>
+<div class="line"><span>In a turret-chamber under the skies)</span></div>
+<div class="line"><span>Passion and joy, and sorrow and laughter,</span></div>
+<div class="line"><span>Life and death, and the things thereafter.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="to-an-elzevir-cicero">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-26" title="26"> </span><span>To an Elzevir Cicero</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Dust-covered</span><span> book, that very few men know,</span></div>
+<div class="line"><span>    Even as very few men understand</span></div>
+<div class="line"><span>    The glory of an ancient, storied land</span></div>
+<div class="line"><span>In the wild current of the ages’ flow,</span></div>
+<div class="line"><span>Have not old scholars, centuries ago</span></div>
+<div class="line"><span>    Caressed you in the hollow of their hand,</span></div>
+<div class="line"><span>    The while with quiet, kindly eyes they scanned</span></div>
+<div class="line"><span>Your pages, yellowed now, then white as snow?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>A voice there is, cries through your every word,</span></div>
+<div class="line"><span>Of him, that after greatest glory came</span></div>
+<div class="line"><span>    Down the grey road to darkness and to tears;</span></div>
+<div class="line"><span>A voice like far seas in still valleys heard,</span></div>
+<div class="line"><span>Crying of love and death and hope and fame</span></div>
+<div class="line"><span>    That change not with the changing of the years.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="to-a-durer-drawing-of-antwerp-harbour">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-27" title="27"> </span><span>To a Dürer Drawing of Antwerp Harbour</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Figured</span><span> by Dürer’s magic hand wast thou,</span></div>
+<div class="line"><span>    That, lightning-like, traced on the lucid page</span></div>
+<div class="line"><span>    Rough, careless lines, with wizardry so sage</span></div>
+<div class="line"><span>That yet the whole was fair, I know not how:</span></div>
+<div class="line"><span>Ships of gaunt masts, and stark, sea-smitten prow,</span></div>
+<div class="line"><span>    Idle, yet soon again to sweep the main</span></div>
+<div class="line"><span>    In the swift service of old merchants’ gain,</span></div>
+<div class="line"><span>Where are ye now, alas, where are ye now?</span></div>
+<div class="line"><span>Gone are ye all, and vanished very long,</span></div>
+<div class="line"><span>    Sunk with great glory in the storied wars,</span></div>
+<div class="line"><span>        Or conquered by the leaping breakers wild:</span></div>
+<div class="line"><span>And yet we love your image, like some song</span></div>
+<div class="line"><span>    That tells of ancient days and high, because</span></div>
+<div class="line"><span>        Old Dürer looked upon you once and smiled.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="pure-virginia">
+<h3 class="level-3 pfirst section-title title with-subtitle"><span class="pageno target" id="page-28" title="28"> </span><span>Pure Virginia</span></h3>
+<p class="level-3 pfirst section-subtitle subtitle" id="york-river-returns">
+<span>York River Returns</span></p>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Like</span><span> smoke that vanishes on the morning breeze</span></div>
+<div class="line"><span>    Are passed the first beginnings of the world,</span></div>
+<div class="line"><span>    When time was even as a bud still curled,</span></div>
+<div class="line"><span>And scarce the limit set of lands and seas;</span></div>
+<div class="line"><span>Like smoke, like smoke the composite auguries</span></div>
+<div class="line"><span>    Of Hebrew and of Hellene are all furled,</span></div>
+<div class="line"><span>    Fulfilled or else forgot, and idly hurled</span></div>
+<div class="line"><span>This way or that way, as the great winds please:</span></div>
+<div class="line"><span>Aye, and like smoke of this delicious herb</span></div>
+<div class="line"><span>    Brought by strange ways the curious mind may guess,</span></div>
+<div class="line"><span>        From where the parrot and the leopard be,</span></div>
+<div class="line"><span>My thoughts, that should be strong, the years to curb</span></div>
+<div class="line"><span>    Go up, and vanish into nothingness</span></div>
+<div class="line"><span>        On a blue cloud of exquisite fragrancy.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="a-preface-for-a-tale-i-have-never-told">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-29" title="29"> </span><span>A Preface for a Tale I have never told</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Herein</span><span> is nought of windy citadels</span></div>
+<div class="line"><span>Where proud kings dwell, that with an iron hand</span></div>
+<div class="line"><span>Deal war or justice: here no history</span></div>
+<div class="line"><span>Of valiant ships upon the wine-dark seas</span></div>
+<div class="line"><span>Passing strange lands and threading channels strait</span></div>
+<div class="line"><span>Between embalmed islands: here no song</span></div>
+<div class="line"><span>That men shall sing in battle and remember</span></div>
+<div class="line"><span>When they are old and grey beside the fire:</span></div>
+<div class="line"><span>Only a story gathered from the hills</span></div>
+<div class="line"><span>And the wind crying of forgotten days,</span></div>
+<div class="line"><span>A story that shall whisper, “All things change—</span></div>
+<div class="line"><span>For friends do grow indifferent, and loves</span></div>
+<div class="line"><span>Die like a dream at morning: bitterness</span></div>
+<div class="line"><span>Is the sure heritage of all men born,</span></div>
+<div class="line"><span>And he alone sees truly, who looks out</span></div>
+<div class="line"><span>From some huge aery peak, considering not</span></div>
+<div class="line"><span>Fast-walled cities, or the works of men,</span></div>
+<div class="line"><span>But turns his gaze unto the mountain-tops</span></div>
+<div class="line"><span>And the unfathomable blue of heaven</span></div>
+<div class="line"><span>That only change not with the changing years”——</span></div>
+<div class="line"><span>A tale that shod itself with ancient shoon</span></div>
+<div class="line"><span>And wrapped its cloak, and wandered from the west.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="a-sonnet">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-30" title="30"> </span><span>A Sonnet</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">There</span><span> is a wind that takes the heart of a man,</span></div>
+<div class="line"><span>    A fresh wind in the latter days of spring,</span></div>
+<div class="line"><span>    When hate and war and every evil thing</span></div>
+<div class="line"><span>That the wide arches of high Heaven span</span></div>
+<div class="line"><span>Seems dust, and less to be accounted than</span></div>
+<div class="line"><span>    The omened touches of a passing wing:</span></div>
+<div class="line"><span>    When Destiny, that calls himself a king,</span></div>
+<div class="line"><span>    Goes all forgotten for the song of Pan:</span></div>
+<div class="line"><span>For why? Because the twittering of birds</span></div>
+<div class="line"><span>    Is the best music that was ever sung,</span></div>
+<div class="line"><span>Because the voice of trees finds better words</span></div>
+<div class="line"><span>    Than ever poet from his heartstrings wrung:</span></div>
+<div class="line"><span>Because all wisdom and all gramarye</span></div>
+<div class="line"><span>Are writ in fields, O very plain to see.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="it-was-all-in-the-black-countree">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-31" title="31"> </span><span>“It was all in the Black Countree”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">It</span><span> was all in the Black Countree,</span></div>
+<div class="line"><span>What time the sweet o’ the year should be,</span></div>
+<div class="line"><span>I saw a tree, all gaunt and grey,</span></div>
+<div class="line"><span>As mindful of a winter’s day:</span></div>
+<div class="line"><span>And that a lonely bird did sit</span></div>
+<div class="line"><span>Upon the topmost branch of it,</span></div>
+<div class="line"><span>Who to my thought did sweeter sing</span></div>
+<div class="line"><span>Than any minstrel of a king.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="to-a-pianist">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-32" title="32"> </span><span>To a Pianist</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">When</span><span> others’ fingers touch the keys</span></div>
+<div class="line"><span>Then most doleful threnodies</span></div>
+<div class="line"><span>Chase about the air, and run</span></div>
+<div class="line"><span>Like Pandæmonium begun.</span></div>
+<div class="line"><span>Rhythm strained and false accord</span></div>
+<div class="line"><span>In a ceaseless stream are poured;</span></div>
+<div class="line"><span>Then sighs are heard, and men depart</span></div>
+<div class="line"><span>To seek the sage physician’s art,</span></div>
+<div class="line"><span>Or silence, and a little ease,</span></div>
+<div class="line"><span>When others’ fingers touch the keys.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>When your fingers touch the keys</span></div>
+<div class="line"><span>Hark, soft sounds of summer seas</span></div>
+<div class="line"><span>In a melody most fair</span></div>
+<div class="line"><span>Whisper through the pleasant air,</span></div>
+<div class="line"><span>Or a winding mountain stream</span></div>
+<div class="line"><span>Glitters to the pale moonbeam,</span></div>
+<div class="line"><span>Or a breeze doth stir the tops</span></div>
+<div class="line"><span>Of springtime larches in a copse,</span></div>
+<div class="line"><span>Or the winds are loosed and hurled</span></div>
+<div class="line"><span>About the wonder-stricken world</span></div>
+<div class="line"><span>With immortal harmonies,</span></div>
+<div class="line"><span>When your fingers touch the keys.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="a-fragment">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-33" title="33"> </span><span>A Fragment</span></h3>
+<div class="align-None container margin transition">
+<p class="center pfirst"><span>――――</span></p>
+</div>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">And</span><span> some came down in a great wind</span></div>
+<div class="line"><span>    Under grey scurrying skies</span></div>
+<div class="line"><span>To where the long wave-beaten shore</span></div>
+<div class="line"><span>    For ever shrieks and cries.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>O, fling aside your toil, your care,</span></div>
+<div class="line"><span>    When one cries of the sea,</span></div>
+<div class="line"><span>And the great waves that foam and toss,</span></div>
+<div class="line"><span>    And the white clouds that flee:</span></div>
+<div class="line"><span>Let us forget our weariness,</span></div>
+<div class="line"><span>    Forget that we have sinned,</span></div>
+<div class="line"><span>So we but sail, what matters it</span></div>
+<div class="line"><span>    If Death ride on the wind?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Storm from the sky, storm from the sea</span></div>
+<div class="line"><span>    Beat on them as they stood,</span></div>
+<div class="line"><span>And a great longing sprang in them</span></div>
+<div class="line"><span>    To cross the roaring flood. . . .</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="sea-poppies">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-34" title="34"> </span><span>Sea Poppies</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">’Twixt</span><span> lonely lands and desert beach,</span></div>
+<div class="line"><span>Where no wind blows and no waves reach,</span></div>
+<div class="line"><span>A sunken precinct here we keep,</span></div>
+<div class="line"><span>With woven wiles of endless sleep;</span></div>
+<div class="line"><span>Our twisted stems of sere-hued green,</span></div>
+<div class="line"><span>Our pallid blooms what sun has seen?</span></div>
+<div class="line"><span>And he that tastes our magic breath</span></div>
+<div class="line"><span>Shall sleep that sleep whose name is death.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Wild clouds are scurrying overhead,</span></div>
+<div class="line"><span>The wild wind’s voice is loud and dread,</span></div>
+<div class="line"><span>Sounding the knell of the dying day,</span></div>
+<div class="line"><span>Yet here is silence and gloom alway.</span></div>
+<div class="line"><span>And a great longing seizes me</span></div>
+<div class="line"><span>To burst my bondage and be free,</span></div>
+<div class="line"><span>To look on winds’ and waters’ strife,</span></div>
+<div class="line"><span>And breathe in my nostrils the breath of life.</span></div>
+<div class="line"><span>Give me not dim and slumbrous ease,</span></div>
+<div class="line"><span>But sounding storm and labouring seas,</span></div>
+<div class="line"><span>Not peaceful and untroubled years,</span></div>
+<div class="line"><span>But toil and warfare and passion and tears.</span></div>
+<div class="line"><span>And I would fall in valorous fight,</span></div>
+<div class="line"><span>And lie on lofty far-seen height.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Yet how to burst these prison-bands,</span></div>
+<div class="line"><span>Forged by unseen spirit-hands?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>O seek not to burst our prison bands</span></div>
+<div class="line"><span>Forged by unseen spirit-hands.</span></div>
+<div class="line"><span>Clashing battle and labouring sea,</span></div>
+<div class="line"><span>    These be for others, not for thee.</span></div>
+<div class="line"><span>Thou lover of storm and passion and war</span></div>
+<div class="line"><span>Break’st our charmed circle never more.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="o-sing-me-a-song-of-the-wild-west-wind">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-35" title="35"> </span><span>“O, sing me a Song of the Wild West Wind”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">O, sing</span><span> me a song of the wild west wind,</span></div>
+<div class="line"><span>    And his great sea-harrying flail,</span></div>
+<div class="line"><span>Of hardy mariners, copper skinned,</span></div>
+<div class="line"><span>    That fly with a bursting sail.</span></div>
+<div class="line"><span>They see the clouds of crispèd white</span></div>
+<div class="line"><span>    That shadow the distant hills,</span></div>
+<div class="line"><span>And filled are they with a strange delight</span></div>
+<div class="line"><span>    As shaking away old ills.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>O, give me a boat that is sure and stark,</span></div>
+<div class="line"><span>    And swift as a slinger’s stone,</span></div>
+<div class="line"><span>With a sail of canvas bronzèd dark,</span></div>
+<div class="line"><span>    And I will go out alone:</span></div>
+<div class="line"><span>Nor fear nor sorrow my soul shall keep</span></div>
+<div class="line"><span>    When around me lies the sea,</span></div>
+<div class="line"><span>And I will return with the night, and sleep</span></div>
+<div class="line"><span>    In the wind’s wild harmony.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="aere-perennius">
+<h3 class="level-3 pfirst section-title title with-subtitle"><span class="pageno target" id="page-36" title="36"> </span><span>Ære Perennius</span></h3>
+<p class="level-3 pfirst section-subtitle subtitle" id="written-on-commemoration-sunday-corpus-christi-college-oxford">
+<span>Written on Commemoration Sunday, Corpus Christi College, Oxford</span></p>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">We</span><span> praise, we praise the immortal dead,</span></div>
+<div class="line"><span>    Who strove beneath unheeding skies</span></div>
+<div class="line"><span>For truth that raised the drooping head,</span></div>
+<div class="line"><span>    For light that gladdened weary eyes:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>The martyr’s cross, the warrior’s sword,</span></div>
+<div class="line"><span>    How should they be of lesser worth</span></div>
+<div class="line"><span>Than some unprofitable hoard</span></div>
+<div class="line"><span>    In ancient mines below the earth?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>The song that one alone has sung,</span></div>
+<div class="line"><span>    The great uncompromising page,</span></div>
+<div class="line"><span>Are these but glittering baubles, flung</span></div>
+<div class="line"><span>    About the world from age to age?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>But ruin’d columns, wondrous tall,</span></div>
+<div class="line"><span>    Built in old time with labour sore,</span></div>
+<div class="line"><span>The mighty deeds done once for all,</span></div>
+<div class="line"><span>    The voice heard once, and heard no more?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Rather they shine as doth the star</span></div>
+<div class="line"><span>    About the close of winter’s day,</span></div>
+<div class="line"><span>That cheers the traveller afar</span></div>
+<div class="line"><span>    And draws him on, and points the way.</span></div>
+</div>
+<div class="align-None container margin transition">
+<p class="center pfirst"><span>――――</span></p>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>We praise, we praise the immortal dead.</span></div>
+<div class="line"><span>    Do they not verily wait till we</span></div>
+<div class="line"><span>Of the spoilt years unharvested</span></div>
+<div class="line"><span>    Be also of their company?</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="the-old-kings">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-37" title="37"> </span><span>The Old Kings</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Far</span><span> away from sunny rills,</span></div>
+<div class="line"><span>Far away from golden broom,</span></div>
+<div class="line"><span>Far away from any town</span></div>
+<div class="line"><span>Whither merchants travel down—</span></div>
+<div class="line"><span>In a hollow of the hills</span></div>
+<div class="line"><span>In impenetrable gloom</span></div>
+<div class="line"><span>Sit the old forgotten kings</span></div>
+<div class="line"><span>Unto whom no poet sings,</span></div>
+<div class="line"><span>Unto whom none makes bequest,</span></div>
+<div class="line"><span>Unto whom no kingdoms rest,——</span></div>
+<div class="line"><span>Only wayward shreds of dreams,</span></div>
+<div class="line"><span>And the sound of ancient streams,</span></div>
+<div class="line"><span>And the shock of ancient strife</span></div>
+<div class="line"><span>On the further shore of life.</span></div>
+</div>
+<div class="align-None container margin transition">
+<p class="center pfirst"><span>――――</span></p>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>When our days are done, shall we</span></div>
+<div class="line"><span>Enter their pale company?</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="o-there-be-kings-whose-treasuries">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-38" title="38"> </span><span>“O there be Kings whose Treasuries”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">O there</span><span> be kings whose treasuries</span></div>
+<div class="line"><span>    Are rich with pearls and gold</span></div>
+<div class="line"><span>And silks and bales of cramasy</span></div>
+<div class="line"><span>    And spices manifold:</span></div>
+<div class="line"><span>Gardens they have with marble stairs</span></div>
+<div class="line"><span>    And streams than life more fair,</span></div>
+<div class="line"><span>With roses set and lavender</span></div>
+<div class="line"><span>    That do enchant the air.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>O there be many ships that sail</span></div>
+<div class="line"><span>    The sea-ways wide and blue,</span></div>
+<div class="line"><span>And there be master-mariners</span></div>
+<div class="line"><span>    To sail them straight and true:</span></div>
+<div class="line"><span>And there be many women fair</span></div>
+<div class="line"><span>    Who watch out anxiously,</span></div>
+<div class="line"><span>And are enamoured of the day</span></div>
+<div class="line"><span>    Their dear ones come from sea:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>But riches I can find enow</span></div>
+<div class="line"><span>    All in a barren land,</span></div>
+<div class="line"><span>Where sombre lakes shine wondrously</span></div>
+<div class="line"><span>    With rocks on either hand:</span></div>
+<div class="line"><span>And I can find enow of love</span></div>
+<div class="line"><span>    Up there, alone, alone,</span></div>
+<div class="line"><span>With none beside me save the wind,</span></div>
+<div class="line"><span>    Nor speech except his moan.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>For there far up among the hills</span></div>
+<div class="line"><span>    The great storms come and go</span></div>
+<div class="line"><span>In a most proud processional</span></div>
+<div class="line"><span>    Of cloud and rain and snow:</span></div>
+<div class="line"><span>There light and darkness only are</span></div>
+<div class="line"><span>    A changing benison</span></div>
+<div class="line"><span>Of the old gods who wrought the world</span></div>
+<div class="line"><span>    And shaped the moon and sun.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="a-study">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-39" title="39"> </span><span>A Study</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">In</span><span> chamber hung with white,</span></div>
+<div class="line"><span>Lit by the dawning light,</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Upon a slender bed</span></div>
+<div class="line"><span>She lies, as she were dead:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Most carven-ivory fair,</span></div>
+<div class="line"><span>And palely gold her hair.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Lo, the sun’s yellow ray,</span></div>
+<div class="line"><span>That, with the rise of day,</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Through quartered casement came</span></div>
+<div class="line"><span>To wake her life’s pale flame.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="the-eremite">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-40" title="40"> </span><span>The Eremite</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">When</span><span> the world is still in the hush of dawn,</span></div>
+<div class="line"><span>And yet fast sleeping are hate and scorn,</span></div>
+<div class="line"><span>From my grey lodging under the hill</span></div>
+<div class="line"><span>I do go out, and wander at will.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Of nights when the riven clouds are hurled,</span></div>
+<div class="line"><span>And strife and rancour possess the world,</span></div>
+<div class="line"><span>I sit alone, with thoughts that are chill,</span></div>
+<div class="line"><span>In my grey lodging under the hill.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="the-house-of-eld">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-41" title="41"> </span><span>The House of Eld</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Now</span><span> the old winds are wild about the house,</span></div>
+<div class="line"><span>    And the old ghosts cry to me from the air</span></div>
+<div class="line"><span>Of a far isle set in the western sea,</span></div>
+<div class="line"><span>    And of the evening sunlight lingering there.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Ah! I am bound here, bound and fettered,</span></div>
+<div class="line"><span>    The dark house crumbles, and the woods decay,</span></div>
+<div class="line"><span>I was too fain of life, that bound me here;</span></div>
+<div class="line"><span>    Away, old long-loved ghosts, away, away!</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="the-south-west-wind">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-42" title="42"> </span><span>The South-west Wind</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">The</span><span> south-west wind has blown his fill,</span></div>
+<div class="line"><span>    And vanished with departing day:</span></div>
+<div class="line"><span>The air is warm, and very still,</span></div>
+<div class="line"><span>    And soft as silks of far Cathay.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>This is a night when spirits stray.</span></div>
+<div class="line"><span>    Their wan limbs bear them where they will;</span></div>
+<div class="line"><span>They wring their pallid hands alway,</span></div>
+<div class="line"><span>    Seeing the lights upon the hill.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="schumann-erstes-verlust">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-43" title="43"> </span><span>Schumann: Erstes Verlust</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">O, dreary</span><span> fall the leaves,</span></div>
+<div class="line"><span>The withered leaves;</span></div>
+<div class="line"><span>Among the trees</span></div>
+<div class="line"><span>Complains the breeze,</span></div>
+<div class="line"><span>That still bereaves.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>All silent lies the mere,</span></div>
+<div class="line"><span>The silver mere,</span></div>
+<div class="line"><span>In saddest wise</span></div>
+<div class="line"><span>Reflecting skies</span></div>
+<div class="line"><span>Forlorn and sere.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Would autumn had not claimed its own</span></div>
+<div class="line"><span>And would the swallows had not flown.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Skies overcast!</span></div>
+<div class="line"><span>Leaves falling fast!</span></div>
+<div class="line"><span>And she has passed</span></div>
+<div class="line"><span>And left the woodland strown,</span></div>
+<div class="line"><span>The woodland strown,</span></div>
+<div class="line"><span>The silver mere,</span></div>
+<div class="line"><span>The dying year,</span></div>
+<div class="line"><span>And me alone.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Skies overcast!</span></div>
+<div class="line"><span>Leaves falling fast!</span></div>
+<div class="line"><span>Does she that passed</span></div>
+<div class="line"><span>Dream of the woodland strown,</span></div>
+<div class="line"><span>The woodland strown,</span></div>
+<div class="line"><span>The silver mere,</span></div>
+<div class="line"><span>The dying year,</span></div>
+<div class="line"><span>And me alone?</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="dark-boughs-against-a-golden-sky">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-44" title="44"> </span><span>“Dark Boughs against a Golden Sky”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Dark</span><span> boughs against a golden sky,</span></div>
+<div class="line"><span>    And crying of the winter wind:</span></div>
+<div class="line"><span>And sweet it is, for hope is high,</span></div>
+<div class="line"><span>    And sad it is, for we have sinned.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Perfect is nature’s every part</span></div>
+<div class="line"><span>    In sunny rest, or windy strife:</span></div>
+<div class="line"><span>But never yet the perfect heart,</span></div>
+<div class="line"><span>    And never yet the perfect life!</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Dark boughs against a golden sky,</span></div>
+<div class="line"><span>    And crying of the winter wind:</span></div>
+<div class="line"><span>And in the cold earth we must lie,</span></div>
+<div class="line"><span>    What matter then if we have sinned?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>For evermore and evermore</span></div>
+<div class="line"><span>    Shall the great river onward roll:</span></div>
+<div class="line"><span>And ever winding streams and poor</span></div>
+<div class="line"><span>    Shall lose them in the mighty whole.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="wind-of-the-darkness">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-45" title="45"> </span><span>“Wind of the Darkness”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Wind</span><span> of the darkness, breathing round us,</span></div>
+<div class="line"><span>    Wind from the never-resting sea,</span></div>
+<div class="line"><span>Lo, you have loosed the cords that bound us,</span></div>
+<div class="line"><span>    Lo, you have set our spirits free:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Free to take wings, like the sea-bird lonely</span></div>
+<div class="line"><span>    Beating hardily up the wind:</span></div>
+<div class="line"><span>Fixed are his eyes on the waters only,</span></div>
+<div class="line"><span>    Never a glance for the land behind.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Wind of the darkness, breathing round us,</span></div>
+<div class="line"><span>    Wind from the never-resting sea.</span></div>
+<div class="line"><span>Was it the old gods’ voice that found us</span></div>
+<div class="line"><span>    Here, where the bars of prison be?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>From the far isle that neither knoweth</span></div>
+<div class="line"><span>    Change of season, nor time’s increase,</span></div>
+<div class="line"><span>Where is plenty, and no man soweth:</span></div>
+<div class="line"><span>    Calling to strife that shall end in peace.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="creator-spiritus">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-46" title="46"> </span><span>Creator Spiritus</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">The</span><span> wind that scatters dying leaves</span></div>
+<div class="line"><span>    And whirls them from the autumn tree</span></div>
+<div class="line"><span>Is grateful to the ship that cleaves</span></div>
+<div class="line"><span>    With stately prow the scurrying sea.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Heedless about the world we play</span></div>
+<div class="line"><span>    Like children in a garden close:</span></div>
+<div class="line"><span>A postern bars the outward way</span></div>
+<div class="line"><span>    And what’s beyond it no man knows:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>For careless days, a life at will,</span></div>
+<div class="line"><span>    A little laughter, and some tears,</span></div>
+<div class="line"><span>These are sufficiency to fill</span></div>
+<div class="line"><span>    The early, vain, untroubled years,</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Till at the last the wind upheaves</span></div>
+<div class="line"><span>    His unimagined strength, and we</span></div>
+<div class="line"><span>Are scattered far, like autumn leaves,</span></div>
+<div class="line"><span>    Or proudly sail, like ships at sea.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="wind-over-the-sea">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-47" title="47"> </span><span>Wind over the Sea</span></h3>
+<div class="line-block outermost">
+<div class="line"><span>    </span><span class="small-caps">Only</span><span> a grey sea, and a long grey shore,</span></div>
+<div class="line"><span>    And the grey heavens brooding over them.</span></div>
+<div class="line"><span>    Twilight of hopes and purposes forgot,</span></div>
+<div class="line"><span>    Twilight of ceaseless eld, and when was youth?</span></div>
+<div class="line"><span>    Is it not lonely here, beyond the years?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Out of the gathering darkness crashes a wind from the</span></div>
+<div class="line"><span>    ocean,</span></div>
+<div class="line"><span>Rushing with league-long paces over the plain of the</span></div>
+<div class="line"><span>    waters,</span></div>
+<div class="line"><span>Driving the clouds and the breakers before it in sudden</span></div>
+<div class="line"><span>    commotion.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Who are these on the wind, riders and riderless horses?</span></div>
+<div class="line"><span>Riders the great ones that have been and are, and those</span></div>
+<div class="line"><span>    to come shall be:</span></div>
+<div class="line"><span>These are the children of might, life’s champions and</span></div>
+<div class="line"><span>    history’s forces.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Might I but grasp at a bridle, and fear not to be trodden</span></div>
+<div class="line"><span>    under,</span></div>
+<div class="line"><span>Swing myself into a saddle, and ride on greatly, exulting</span></div>
+<div class="line"><span>On down the long straight road of the wind, a galloping</span></div>
+<div class="line"><span>    thunder!</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>    Only a grey sea, and a long grey shore,</span></div>
+<div class="line"><span>    And the grey heavens brooding over them,</span></div>
+<div class="line"><span>    Twilight of hopes and purposes forgot,</span></div>
+<div class="line"><span>    Twilight of ceaseless eld, for when was youth?</span></div>
+<div class="line"><span>    Is it not lonely here, beyond the years?</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="songs-on-the-downs">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-48" title="48"> </span><span>Songs on the Downs</span></h3>
+<div class="level-4 section" id="id1">
+<h4 class="level-4 pfirst section-title title"><span>1</span></h4>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">This</span><span> is the road the Romans made,</span></div>
+<div class="line"><span>    This track half lost in the green hills,</span></div>
+<div class="line"><span>Or fading in a forest-glade</span></div>
+<div class="line"><span>    ’Mid violets and daffodils.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>The years have fallen like dead leaves,</span></div>
+<div class="line"><span>    Unwept, uncounted, and unstayed</span></div>
+<div class="line"><span>(Such as the autumn tempest thieves),</span></div>
+<div class="line"><span>    Since first this road the Romans made.</span></div>
+</div>
+</div>
+<div class="level-4 section" id="id2">
+<h4 class="level-4 pfirst section-title title"><span>2</span></h4>
+<div class="line-block outermost">
+<div class="line"><span>A miser lives within this house,</span></div>
+<div class="line"><span>His patron saint’s the gnawing mouse,</span></div>
+<div class="line"><span>And there’s no peace upon his brows.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>A many ancient trees and thin</span></div>
+<div class="line"><span>Do fold the place their shade within,</span></div>
+<div class="line"><span>And moan, as for remembered sin.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+</div>
+</div>
+<div class="level-2 section" id="iii-last-poems-and-the-burial-of-sophocles">
+<h2 class="level-2 pfirst section-title title"><span class="pageno target" id="page-49" title="49"> </span><span>III. Last Poems and “The Burial of Sophocles”</span></h2>
+<div class="level-3 section" id="we-who-have-bowed-ourselves-to-time">
+<h3 class="level-3 pfirst section-title title"><span>“We who have bowed ourselves to Time”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">We</span><span> who have bowed ourselves to time</span></div>
+<div class="line"><span>Now arm an uneventful rime</span></div>
+<div class="line"><span>    With panoply of flowers</span></div>
+<div class="line"><span>    Through the long summer hours. . . .</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>But now our fierce and warlike Muse</span></div>
+<div class="line"><span>Doth soft companionship refuse,</span></div>
+<div class="line"><span>    And we must mount and ride</span></div>
+<div class="line"><span>    Upon a steed untried. . . .</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>We who have led by gradual ways</span></div>
+<div class="line"><span>Our placid life to sterner days</span></div>
+<div class="line"><span>    And for old quiet things</span></div>
+<div class="line"><span>    Have set the strife of kings,</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Who battled have with bloody hands</span></div>
+<div class="line"><span>Through evil times in barren lands,</span></div>
+<div class="line"><span>    To whom the voice of guns</span></div>
+<div class="line"><span>    Speaks and no longer stuns,</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Calm, though with death encompassèd,</span></div>
+<div class="line"><span>That watch the hours go overhead</span></div>
+<div class="line"><span>    Knowing too well we must</span></div>
+<div class="line"><span>    With all men come to dust. . . .</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Crave of our masters’ clemency</span></div>
+<div class="line"><span>Silence a little space that we</span></div>
+<div class="line"><span>    Upon their ear may force</span></div>
+<div class="line"><span>    Tales of our trodden course.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="anglia-valida-in-senectute">
+<h3 class="level-3 pfirst section-title title with-subtitle"><span class="pageno target" id="page-50" title="50"> </span><span>Anglia Valida in Senectute</span></h3>
+<p class="level-3 pfirst section-subtitle subtitle" id="on-the-declaration-of-war">
+<span>(On the Declaration of War)</span></p>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Not</span><span> like to those who find untrodden ways;</span></div>
+<div class="line"><span>    But down the weary paths we know,</span></div>
+<div class="line"><span>Through every change of sky and change of days</span></div>
+<div class="line"><span>    Silent, processional we go.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Not unto us the soft, unlaboured breath</span></div>
+<div class="line"><span>    Of children’s hopes and children’s fears:</span></div>
+<div class="line"><span>We are not sworn to battle to the death</span></div>
+<div class="line"><span>    With all the wrongs of all the years:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>We are old, we are old, and worn and school’d with ills,</span></div>
+<div class="line"><span>    Maybe our road is almost done,</span></div>
+<div class="line"><span>Maybe we are drawn near unto the hills</span></div>
+<div class="line"><span>    Where rest is and the setting sun:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>But yet a pride is ours that will not brook</span></div>
+<div class="line"><span>    The taunts of fools too saucy grown,</span></div>
+<div class="line"><span>He that is rash to prove it, let him look</span></div>
+<div class="line"><span>    He kindle not a fire unknown.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Since first we flung our gauntlet to the skies</span></div>
+<div class="line"><span>    And dared the high Gods’ will to bend,</span></div>
+<div class="line"><span>A fire that still may burn deceit and lies</span></div>
+<div class="line"><span>    Burn and consume them to the end.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="dark-is-the-world-our-fathers-left-us">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-51" title="51"> </span><span>“Dark is the World our Fathers left us”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Dark</span><span> is the world our fathers left us,</span></div>
+<div class="line"><span>    Wearily, greyly the long years flow,</span></div>
+<div class="line"><span>Almost the gloom has of hope bereft us,</span></div>
+<div class="line"><span>    Far is the high gods’ song and low:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Sombre the crests of the mountains lonely,</span></div>
+<div class="line"><span>    Leafless, wind-ridden, moan the trees:</span></div>
+<div class="line"><span>Down in the valleys is twilight only,</span></div>
+<div class="line"><span>    Twilight over the mourning seas:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Time was when earth was always golden,</span></div>
+<div class="line"><span>    Time was when skies were always clear:</span></div>
+<div class="line"><span>Spirits and souls of the heroes olden,</span></div>
+<div class="line"><span>    Faint are cries from the darkness, hear!</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Tear ye the veil of time asunder</span></div>
+<div class="line"><span>    Tear the veil, ’tis the gods’ command,</span></div>
+<div class="line"><span>Hear we the sun-stricken breakers thunder</span></div>
+<div class="line"><span>    Over the shore where the heroes stand.</span></div>
+</div>
+<div class="align-None container margin transition">
+<p class="center pfirst"><span>――――</span></p>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Dark is the world our fathers left us,</span></div>
+<div class="line"><span>    Heavily, greyly the long years flow,</span></div>
+<div class="line"><span>Almost the gloom has of hope bereft us,</span></div>
+<div class="line"><span>    Far is the high gods’ song and low.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="awakening">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-52" title="52"> </span><span>Awakening</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Gold-crested</span><span> towers against the veilèd skies,</span></div>
+<div class="line"><span>Sere branches of the winter trees beneath,</span></div>
+<div class="line"><span>And a low song, and heavy-lidded eyes;</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Is there aught else in all the world beside?</span></div>
+<div class="line"><span>Is not time stilled and ended in this hour?</span></div>
+</div>
+<div class="align-None container margin transition">
+<p class="center pfirst"><span>――――</span></p>
+</div>
+<p class="pfirst"><span>Up, and away! the belted squadrons ride!</span></p>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="ave-atque-vale">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-53" title="53"> </span><span>Ave atque Vale</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">In</span><span> Oxford, evermore the same</span></div>
+<div class="line"><span>    Unto the uttermost verge of time,</span></div>
+<div class="line"><span>Though grave-dust choke the sons of men,</span></div>
+<div class="line"><span>    And silence wait upon the rime,</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>At evening now the skies set forth</span></div>
+<div class="line"><span>    Last glories of the dying year:</span></div>
+<div class="line"><span>The wind gives chase to relict leaves:</span></div>
+<div class="line"><span>    And we, we may not linger here.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>A little while, and we are gone:</span></div>
+<div class="line"><span>    God knows if it be ours to see</span></div>
+<div class="line"><span>Again the earliest hoar-frost white</span></div>
+<div class="line"><span>    On the long lawns of Trinity.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>In Merton, of the many courts</span></div>
+<div class="line"><span>    And doorways good to wander through,</span></div>
+<div class="line"><span>Gable and spire shall glitter white</span></div>
+<div class="line"><span>    Or tawny gold against the blue:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>And still the winter sun shall smile</span></div>
+<div class="line"><span>    At noonday, or at sunset hour</span></div>
+<div class="line"><span>On Magdalen, girt with ancient trees,</span></div>
+<div class="line"><span>    Beneath her bright immortal tower.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span class="pageno target" id="page-54" title="54"> </span><span>Though nevermore we tread the ways</span></div>
+<div class="line"><span>    That our returning feet have known</span></div>
+<div class="line"><span>Past Oriel, and Christ Church gate</span></div>
+<div class="line"><span>    Unto those dearer walls, our own.</span></div>
+</div>
+<div class="align-None container margin transition">
+<p class="center pfirst"><span>――――</span></p>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Oxford is evermore the same,</span></div>
+<div class="line"><span>    Unto the uttermost verge of time,</span></div>
+<div class="line"><span>Though grave-dust choke the sons of men,</span></div>
+<div class="line"><span>    And silence wait upon the rime.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="o-one-came-down-from-seven-hills">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-55" title="55"> </span><span>“O, one came down from Seven Hills”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">O, one</span><span> came down from seven hills</span></div>
+<div class="line"><span>    And crossèd seven streams:</span></div>
+<div class="line"><span>All in his hands were thyme and grass</span></div>
+<div class="line"><span>    And in his eyes were dreams:</span></div>
+<div class="line"><span>He passèd by a seven fields</span></div>
+<div class="line"><span>    With early dews all grey</span></div>
+<div class="line"><span>And entered in the stricken town</span></div>
+<div class="line"><span>    About the break of day.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>“O you old men that stand and talk</span></div>
+<div class="line"><span>    About the market-place,</span></div>
+<div class="line"><span>There is much trouble in your eyes</span></div>
+<div class="line"><span>    And anguish in your face:</span></div>
+<div class="line"><span>O woman in a silent room</span></div>
+<div class="line"><span>    Within a silent house,</span></div>
+<div class="line"><span>There is no pleasure in your voice</span></div>
+<div class="line"><span>    Or peace upon your brows.”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>“O how should such as we rejoice</span></div>
+<div class="line"><span>    Who weep that others die,</span></div>
+<div class="line"><span>Who quake, and curse ourselves, and watch</span></div>
+<div class="line"><span>    The vengeful hours go by?</span></div>
+<div class="line"><span>O better far to fly the grief</span></div>
+<div class="line"><span>    That wounds, and never kills;</span></div>
+<div class="line"><span>O better far to fly the town</span></div>
+<div class="line"><span>    And seek the seven hills——”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>“I will go pray the seven gods</span></div>
+<div class="line"><span>    Who keep the seven hills</span></div>
+<div class="line"><span>That they do grant your city peace,</span></div>
+<div class="line"><span>    And easement of her ills.”</span></div>
+<div class="line"><span class="pageno target" id="page-56" title="56"> </span><span>“Nay, rather pray the seven gods</span></div>
+<div class="line"><span>    To launch the latest pain;</span></div>
+<div class="line"><span>For there be many things to do</span></div>
+<div class="line"><span>    Ere we see peace again.”</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>“Then I’ll go praise the seven gods</span></div>
+<div class="line"><span>    With hymns and chauntings seven,</span></div>
+<div class="line"><span>Such as shall split the mountain-tops</span></div>
+<div class="line"><span>    And shrivel up blue heaven:</span></div>
+<div class="line"><span>That there be men who mock at threats</span></div>
+<div class="line"><span>    And wag their heads at strife,</span></div>
+<div class="line"><span>Love home above their own hearts’ blood</span></div>
+<div class="line"><span>    And honour more than life.”</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="sonnet-to-the-british-navy">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-57" title="57"> </span><span>Sonnet to the British Navy</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Lest</span><span> force aspire to brand an alien name</span></div>
+<div class="line"><span>    Upon the immortal empire of the free:</span></div>
+<div class="line"><span>Lest fire and sword and slaughter strive to tame</span></div>
+<div class="line"><span>    This isle, was ne’er so tamed, and ne’er shall be.</span></div>
+<div class="line"><span>Ye guard the ocean barrier, undismayed</span></div>
+<div class="line"><span>    ’Midst hidden perils for a brave man’s fears,</span></div>
+<div class="line"><span>In iron craft that many smiths have made</span></div>
+<div class="line"><span>    With peaceful labour in the old, dead years.</span></div>
+<div class="line"><span>In a small vessel, of one Smith ill-wrought</span></div>
+<div class="line"><span>    I must soon venture on another deep,</span></div>
+<div class="line"><span>And dare, with little hope, and little thought</span></div>
+<div class="line"><span>    Of praise and honour and untroubled sleep:</span></div>
+<div class="line"><span>So, as each sails upon his perilous sea,</span></div>
+<div class="line"><span>    I pray High God He strengthen you, and me.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="the-last-meeting">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-58" title="58"> </span><span>The Last Meeting</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">We</span><span> who are young, and have caught the splendour of</span></div>
+<div class="line"><span>        life,</span></div>
+<div class="line"><span>    Hunting it down the forested ways of the world,</span></div>
+<div class="line"><span>Do we not wear our hearts like a banner unfurled</span></div>
+<div class="line"><span>    (Crowned with a chaplet of love, shod with the sandals</span></div>
+<div class="line"><span>        of strife)?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Now not a lustre of pain, nor an ocean of tears</span></div>
+<div class="line"><span>    Nor pangs of death, nor any other thing</span></div>
+<div class="line"><span>That the old tristful gods on our heads may bring</span></div>
+<div class="line"><span>    Can rob us of this one hour in the midst of the years.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="the-new-age-and-the-old">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-59" title="59"> </span><span>The New Age and the Old</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Like</span><span> the small source of a smooth-flowing river,</span></div>
+<div class="line"><span>    Like the pale dawn of a wonderful day,</span></div>
+<div class="line"><span>Comes the New Age, from High God, the good giver,</span></div>
+<div class="line"><span>    Comes with the shouts of the children at play:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>As an old leaf whirls faster and faster</span></div>
+<div class="line"><span>    From the sere branch that once gave it fair birth,</span></div>
+<div class="line"><span>Into the arms of the devil, its master,</span></div>
+<div class="line"><span>    Be the old age swept away from the earth!</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="to-the-cultured">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-60" title="60"> </span><span>To the Cultured</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Sons</span><span> of culture, God-given,</span></div>
+<div class="line"><span>First offspring of Heaven,</span></div>
+<div class="line"><span>Athletic and tanned,</span></div>
+<div class="line"><span>Well-built and not nervous,</span></div>
+<div class="line"><span>With your golf and your tweeds</span></div>
+<div class="line"><span>And your “noble editions,”</span></div>
+<div class="line"><span>Quiet lives and few needs</span></div>
+<div class="line"><span>(Say a thousand a year</span></div>
+<div class="line"><span>For your earthly career)</span></div>
+<div class="line"><span>Who can’t understand</span></div>
+<div class="line"><span>Discontent and seditions,</span></div>
+<div class="line"><span>May Heaven preserve us</span></div>
+<div class="line"><span>From being like you.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>What are we, what am I?</span></div>
+<div class="line"><span>Poor rough creatures, whose life</span></div>
+<div class="line"><span>Is “depressing” and “grey,”</span></div>
+<div class="line"><span>Is a heart-breaking strife</span></div>
+<div class="line"><span>With death and with shame</span></div>
+<div class="line"><span>And your polite laughter,</span></div>
+<div class="line"><span>Till—the world pass away</span></div>
+<div class="line"><span>In smoke and in flame,</span></div>
+<div class="line"><span>And some of us die,</span></div>
+<div class="line"><span>And some live on after</span></div>
+<div class="line"><span>To build it anew.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="afterwards">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-61" title="61"> </span><span>Afterwards</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Afterwards,</span><span> when</span></div>
+<div class="line"><span>The old Gods’ hate</span></div>
+<div class="line"><span>On the riven earth</span></div>
+<div class="line"><span>No more is poured:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>When weapons of war</span></div>
+<div class="line"><span>Are all outworn</span></div>
+<div class="line"><span>What shall become</span></div>
+<div class="line"><span>Of the race of men?</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>One shall go forth</span></div>
+<div class="line"><span>In the likeness of a child:</span></div>
+<div class="line"><span>Under sere skies</span></div>
+<div class="line"><span>Of a grey dawning:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>One shall go forth</span></div>
+<div class="line"><span>In the likeness of a child,</span></div>
+<div class="line"><span>And desolate places</span></div>
+<div class="line"><span>Shall spring and blossom:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>One shall go forth</span></div>
+<div class="line"><span>In the likeness of a child:</span></div>
+<div class="line"><span>And men shall sing</span></div>
+<div class="line"><span>And greatly rejoice:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>All men shall sing</span></div>
+<div class="line"><span>For the love that is in them,</span></div>
+<div class="line"><span>And he shall behold it</span></div>
+<div class="line"><span>And sing also.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="domum-redit-poeta">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-62" title="62"> </span><span>Domum redit Poeta</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">O much</span><span> desired from far away</span></div>
+<div class="line"><span>    And long, I hold thee once again,</span></div>
+<div class="line"><span>Thou undiminished treasury</span></div>
+<div class="line"><span>    Of small delights, yet nowise vain:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>The cat curled on the cosy hearth,</span></div>
+<div class="line"><span>    The thrushes in the garden trees,</span></div>
+<div class="line"><span>The memories of younger years,</span></div>
+<div class="line"><span>    The quiet voices, and the peace.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="memories">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-63" title="63"> </span><span>Memories</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Shapes</span><span> in the mist, it is long since I saw you,</span></div>
+<div class="line"><span>    Pale hands and faces, and quiet eyes,</span></div>
+<div class="line"><span>Crowned with a garland the dead years wrought you</span></div>
+<div class="line"><span>    Out of remembrance that never dies:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>One among you is tall and supple</span></div>
+<div class="line"><span>    Good to fight or to love beside,</span></div>
+<div class="line"><span>Only the stain of a deadly quarrel,</span></div>
+<div class="line"><span>    Only that and the years divide:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>One there is with a face as honest,</span></div>
+<div class="line"><span>    Heart as true, as the open sea,</span></div>
+<div class="line"><span>One who never betrayed a comrade—</span></div>
+<div class="line"><span>    Death stands now betwixt him and me.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>One I loved with a passionate longing</span></div>
+<div class="line"><span>    Born of worship and fierce despair,</span></div>
+<div class="line"><span>Dreamed that Heaven were only happy</span></div>
+<div class="line"><span>    If at length I should find him there.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Shapes in the mist, ye see me lonely,</span></div>
+<div class="line"><span>    Lonely and sad in the dim firelight:</span></div>
+<div class="line"><span>How far now to the last of all battles?</span></div>
+<div class="line"><span>    (Listen, the guns are loud to-night!)</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Whatever comes, I will strike once surely,</span></div>
+<div class="line"><span>    Once because of an ancient tryst,</span></div>
+<div class="line"><span>Once for love of your dear dead faces</span></div>
+<div class="line"><span>    Ere I come unto you, Shapes in the mist.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="intercessional">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-64" title="64"> </span><span>Intercessional</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">There</span><span> is a place where voices</span></div>
+<div class="line"><span>    Of great guns do not come,</span></div>
+<div class="line"><span>Where rifle, mine, and mortar</span></div>
+<div class="line"><span>    For evermore are dumb:</span></div>
+<div class="line"><span>Where there is only silence,</span></div>
+<div class="line"><span>    And peace eternal and rest,</span></div>
+<div class="line"><span>Set somewhere in the quiet isles</span></div>
+<div class="line"><span>    Beyond Death’s starry West.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>O God, the God of battles,</span></div>
+<div class="line"><span>    To us who intercede,</span></div>
+<div class="line"><span>Give only strength to follow</span></div>
+<div class="line"><span>    Until there’s no more need,</span></div>
+<div class="line"><span>And grant us at that ending</span></div>
+<div class="line"><span>    Of the unkindly quest</span></div>
+<div class="line"><span>To come unto the quiet isles</span></div>
+<div class="line"><span>    Beyond Death’s starry West.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="april-1916">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-65" title="65"> </span><span>April 1916</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Now</span><span> spring is come upon the hills in France,</span></div>
+<div class="line"><span>And all the trees are delicately fair,</span></div>
+<div class="line"><span>As heeding not the great guns’ voice, by chance</span></div>
+<div class="line"><span>Brought down the valley on a wandering air:</span></div>
+<div class="line"><span>Now day by day upon the uplands bare</span></div>
+<div class="line"><span>Do gentle, toiling horses draw the plough,</span></div>
+<div class="line"><span>And birds sing often in the orchards where</span></div>
+<div class="line"><span>Spring wantons it with blossoms on her brow—</span></div>
+<div class="line"><span>Aye! but there is no peace in England now.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>O little isle amid unquiet seas,</span></div>
+<div class="line"><span>Though grisly messengers knock on many doors,</span></div>
+<div class="line"><span>Though there be many storms among your trees</span></div>
+<div class="line"><span>And all your banners rent with ancient wars;</span></div>
+<div class="line"><span>Yet such a grace and majesty are yours</span></div>
+<div class="line"><span>There be still some, whose glad heart suffereth</span></div>
+<div class="line"><span>All hate can bring from her misgotten stores,</span></div>
+<div class="line"><span>Telling themselves, so England’s self draw breath,</span></div>
+<div class="line"><span>That’s all the happiness on this side death.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="over-the-hills-and-hollows-green">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-66" title="66"> </span><span>“Over the Hills and Hollows Green”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Over</span><span> the hills and hollows green</span></div>
+<div class="line"><span>    The springtide air goes valiantly,</span></div>
+<div class="line"><span>Where many sainted singing larks</span></div>
+<div class="line"><span>    And blessed primaveras be:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>But bitterly the springtide air</span></div>
+<div class="line"><span>    Over the desert towns doth blow,</span></div>
+<div class="line"><span>About whose torn and shattered streets</span></div>
+<div class="line"><span>    No more shall children’s footsteps go.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="sonnet">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-67" title="67"> </span><span>Sonnet</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">To-night</span><span> the world is but a prison house,</span></div>
+<div class="line"><span>And kindly ways, and all the springing grass</span></div>
+<div class="line"><span>Are dungeon stones to him that may not pass</span></div>
+<div class="line"><span>Among them, save with anguish on his brows:</span></div>
+<div class="line"><span>And any wretched husbandman that ploughs</span></div>
+<div class="line"><span>The upland acres in his habit spare</span></div>
+<div class="line"><span>Is king, to those in palaces of glass</span></div>
+<div class="line"><span>Who sit with grief and weariness for spouse.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>O God, who madest first the world that we</span></div>
+<div class="line"><span>Might happy live, and praise its pleasantness</span></div>
+<div class="line"><span>In such wise as the angels never could,</span></div>
+<div class="line"><span>Wherefore are hearts, fashioned so wondrously,</span></div>
+<div class="line"><span>All spoiled and changed by human bitterness</span></div>
+<div class="line"><span>Into the likenesses of stone and wood?</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="o-long-the-fiends-of-war-shall-dance">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-68" title="68"> </span><span>“O Long the Fiends of War shall dance”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">O long</span><span> the fiends of war shall dance</span></div>
+<div class="line"><span>Upon the stricken fields of France:</span></div>
+<div class="line"><span>And long and long their grisly cry</span></div>
+<div class="line"><span>Shall echo up and smite the sky:</span></div>
+<div class="line"><span>O long and long the tears of God</span></div>
+<div class="line"><span>Shall fall upon a barren sod,</span></div>
+<div class="line"><span>Save when, of His great clemency,</span></div>
+<div class="line"><span>He gives men’s hearts in custody</span></div>
+<div class="line"><span>Of grim old kindly Death, who knows</span></div>
+<div class="line"><span>The mould is better than the rose.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="for-r-q-g">
+<h3 class="level-3 pfirst section-title title with-subtitle"><span class="pageno target" id="page-69" title="69"> </span><span>For R. Q. G.</span></h3>
+<p class="level-3 pfirst section-subtitle subtitle" id="july-1916">
+<span>July 1916</span></p>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">O God,</span><span> whose great inscrutable purposes</span></div>
+<div class="line"><span>(Seen only of the one all-seeing eye)</span></div>
+<div class="line"><span>Are as unchangeable as the azure sky,</span></div>
+<div class="line"><span>And as fulfilled of infinite mysteries:</span></div>
+<div class="line"><span>Are like a fast-locked castle without keys</span></div>
+<div class="line"><span>Whereof the gates are very strong and high,</span></div>
+<div class="line"><span>Impenetrable, and we poor fools die</span></div>
+<div class="line"><span>Nor even know what thing beyond them is:</span></div>
+<div class="line"><span>O God, by whom men’s lives are multiplied,</span></div>
+<div class="line"><span>    Are scattered broadcast in the world like grain,</span></div>
+<div class="line"><span>        And after long time reaped again and stored,</span></div>
+<div class="line"><span>O Thou who only canst be glorified</span></div>
+<div class="line"><span>    By man’s own passion and the supreme pain,</span></div>
+<div class="line"><span>        Accept this sacrifice of blood outpoured.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="sun-and-shadow-and-winds-of-spring">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-70" title="70"> </span><span>“Sun and Shadow and Winds of Spring”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Sun</span><span> and shadow and winds of spring,</span></div>
+<div class="line"><span>    Love and laughter and hope and fame,</span></div>
+<div class="line"><span>Cloud and storm-light over the hills,</span></div>
+<div class="line"><span>    Tears and passion and sordid shame:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>All, all are but as quenchèd fire</span></div>
+<div class="line"><span>    And vanish’d smoke to him that lies</span></div>
+<div class="line"><span>Amid the silence of the trees</span></div>
+<div class="line"><span>    Under the silence of the skies.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="let-us-tell-quiet-stories-of-kind-eyes">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-71" title="71"> </span><span>“Let us tell Quiet Stories of Kind Eyes”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Let</span><span> us tell quiet stories of kind eyes</span></div>
+<div class="line"><span>    And placid brows where peace and learning sate:</span></div>
+<div class="line"><span>Of misty gardens under evening skies</span></div>
+<div class="line"><span>    Where four would walk of old, with steps sedate.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Let’s have no word of all the sweat and blood,</span></div>
+<div class="line"><span>    Of all the noise and strife and dust and smoke</span></div>
+<div class="line"><span>(We who have seen Death surging like a flood,</span></div>
+<div class="line"><span>      Wave upon wave, that leaped and raced and broke).</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Or let’s sit silently, we three together,</span></div>
+<div class="line"><span>    Around a wide hearth-fire that’s glowing red,</span></div>
+<div class="line"><span>Giving no thought to all the stormy weather</span></div>
+<div class="line"><span>    That flies above the roof-tree overhead.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>And he, the fourth, that lies all silently</span></div>
+<div class="line"><span>    In some far-distant and untended grave,</span></div>
+<div class="line"><span>Under the shadow of a shattered tree,</span></div>
+<div class="line"><span>    Shall leave the company of the hapless brave,</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>And draw nigh unto us for memory’s sake,</span></div>
+<div class="line"><span>    Because a look, a word, a deed, a friend,</span></div>
+<div class="line"><span>Are bound with cords that never a man may break,</span></div>
+<div class="line"><span>    Unto his heart for ever, until the end.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="save-that-poetic-fire">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-72" title="72"> </span><span>“Save that Poetic Fire”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Save</span><span> that poetic fire</span></div>
+<div class="line"><span>    Burns in the hidden heart,</span></div>
+<div class="line"><span>Save that the full-voiced choir</span></div>
+<div class="line"><span>    Sings in a place apart,</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Man that’s of woman born,</span></div>
+<div class="line"><span>    With all his imaginings,</span></div>
+<div class="line"><span>Were less than the dew of morn,</span></div>
+<div class="line"><span>    Less than the least of things.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+<div class="level-3 section" id="the-burial-of-sophocles">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-73" title="73"> </span><span>The Burial of Sophocles</span></h3>
+<div class="level-4 section" id="the-first-verses">
+<h4 class="level-4 pfirst section-title title"><span>The First Verses</span></h4>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">Gather</span><span> great store of roses, crimson-red</span></div>
+<div class="line"><span>    From ancient gardens under summer skies:</span></div>
+<div class="line"><span>New opened buds, and some that soon must shed</span></div>
+<div class="line"><span>    Their leaves to earth, that all expectant lies;</span></div>
+<div class="line"><span>Some from the paths of poets’ wandering,</span></div>
+<div class="line"><span>    Some from the places where young lovers meet,</span></div>
+<div class="line"><span>Some from the seats of dreamers pondering,</span></div>
+<div class="line"><span>    And all most richly red, and honey-sweet.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>For in the splendour of the afternoon,</span></div>
+<div class="line"><span>    When sunshine lingers on the glittering town</span></div>
+<div class="line"><span>And glorifies the temples wondrous-hewn</span></div>
+<div class="line"><span>    All set about it like a deathless crown,</span></div>
+<div class="line"><span>We will go mingle with the solemn throng,</span></div>
+<div class="line"><span>    With neither eyes that weep, nor hearts that bleed,</span></div>
+<div class="line"><span>That to his grave with slow, majestic song</span></div>
+<div class="line"><span>    Bears down the latest of the godlike seed.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Many a singer lies on distant isle</span></div>
+<div class="line"><span>    Beneath the canopy of changing sky:</span></div>
+<div class="line"><span>Around them waves innumerable smile,</span></div>
+<div class="line"><span>    And o’er their head the restless seabirds cry:</span></div>
+<div class="line"><span>But we will lay him far from sound of seas,</span></div>
+<div class="line"><span>    Far from the jutting crags’ unhopeful gloom,</span></div>
+<div class="line"><span>Where there blows never wind save summer breeze,</span></div>
+<div class="line"><span>    And where the growing rose may clasp his tomb.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>And thither in the splendid nights of spring,</span></div>
+<div class="line"><span>    When stars in legions over heaven are flung,</span></div>
+<div class="line"><span>Shall come the ancient gods, all wondering</span></div>
+<div class="line"><span>    Why he sings not that had so richly sung:</span></div>
+<div class="line"><span class="pageno target" id="page-74" title="74"> </span><span>There Heracles with peaceful foot shall press</span></div>
+<div class="line"><span>    The springing herbage, and Hephæstus strong,</span></div>
+<div class="line"><span>Hera and Aphrodite’s loveliness,</span></div>
+<div class="line"><span>    And the great giver of the choric song.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>And thither, after weary pilgrimage,</span></div>
+<div class="line"><span>    From unknown lands beyond the hoary wave,</span></div>
+<div class="line"><span>Shall travellers through every coming age</span></div>
+<div class="line"><span>    Approach to pluck a blossom from his grave:</span></div>
+<div class="line"><span>Some in the flush of youth, or in the prime,</span></div>
+<div class="line"><span>    Whose life is still as heapèd gold to spend,</span></div>
+<div class="line"><span>And some who have drunk deep of grief and time,</span></div>
+<div class="line"><span>    And who yet linger half-afraid the end.</span></div>
+</div>
+</div>
+<div class="level-4 section" id="the-interlude">
+<h4 class="level-4 pfirst section-title title"><span>The Interlude</span></h4>
+<div class="line-block outermost">
+<div class="line"><span>It was upon a night of spring,</span></div>
+<div class="line"><span>Even the time when first do sing</span></div>
+<div class="line"><span>The new-returnèd nightingales;</span></div>
+<div class="line"><span>Whenas all hills and woods and dales</span></div>
+<div class="line"><span>Are resonant with melody</span></div>
+<div class="line"><span>Of songs that die not, but shall be</span></div>
+<div class="line"><span>Unto the latest hour of time</span></div>
+<div class="line"><span>Beyond the life of word or rime—</span></div>
+<div class="line"><span>Whenas all brooks more softly flow</span></div>
+<div class="line"><span>Remembering lovers long ago</span></div>
+<div class="line"><span>That stood upon their banks and vowed,</span></div>
+<div class="line"><span>And love was with them like a cloud:</span></div>
+<div class="line"><span>There came one out of Athens town</span></div>
+<div class="line"><span>In a spun robe, with sandals brown,</span></div>
+<div class="line"><span>Just when the white ship of the moon</span></div>
+<div class="line"><span>Had first set sail, and many a rune</span></div>
+<div class="line"><span>Was written in the argent stars;</span></div>
+<div class="line"><span>His feet were set towards the hills</span></div>
+<div class="line"><span>Because he knew that there the rills</span></div>
+<div class="line"><span>Ran down like jewels, and fairy cars</span></div>
+<div class="line"><span class="pageno target" id="page-75" title="75"> </span><span>Galloped, maybe, among the dells,</span></div>
+<div class="line"><span>And airy sprites wove fitful spells</span></div>
+<div class="line"><span>Of gossamer and cold moonshine</span></div>
+<div class="line"><span>Which do most mistily entwine:</span></div>
+<div class="line"><span>And ever the hills called, and a voice</span></div>
+<div class="line"><span>Cried: “Soon, maybe, comes thy choice</span></div>
+<div class="line"><span>Twixt mortal immortality</span></div>
+<div class="line"><span>Such as shall never be again,</span></div>
+<div class="line"><span>’Twixt the most passionate-pleasant pain</span></div>
+<div class="line"><span>And all the quiet, barren joys</span></div>
+<div class="line"><span>That old men prate about to boys.”</span></div>
+</div>
+<div class="align-None container margin transition">
+<p class="center pfirst"><span>――――</span></p>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>He wandered many nights and days—</span></div>
+<div class="line"><span>Whose morns were always crystal clear,</span></div>
+<div class="line"><span>As lay the world in still amaze</span></div>
+<div class="line"><span>Enchanted of the springing year,</span></div>
+<div class="line"><span>And all the nights with wakeful eyes</span></div>
+<div class="line"><span>Watched for another dawn to rise—</span></div>
+<div class="line"><span>Till at the last the mountain tops</span></div>
+<div class="line"><span>Received him, which like giant props</span></div>
+<div class="line"><span>Stand, lest the all-encircling sky</span></div>
+<div class="line"><span>Fall down, and men be crushed and die.</span></div>
+<div class="line"><span>And so he reached a curvèd hill</span></div>
+<div class="line"><span>Whereon the hornèd moon did seem</span></div>
+<div class="line"><span>Her richest radiance to spill</span></div>
+<div class="line"><span>In an inestimable stream,</span></div>
+<div class="line"><span>Like jewels rare of countless price,</span></div>
+<div class="line"><span>Or wizard magic turned to ice.</span></div>
+</div>
+<div class="align-None container margin transition">
+<p class="center pfirst"><span>――――</span></p>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>And as he reached the topmost crest of it,</span></div>
+<div class="line"><span>Lo! the Olympian majesties did sit</span></div>
+<div class="line"><span>In a most high and passionless conclave:</span></div>
+<div class="line"><span>They ate ambrosia with their deathless lips,</span></div>
+<div class="line"><span>And ever and anon the golden wave</span></div>
+<div class="line"><span>Flowed of the drink divine, which only strips</span></div>
+<div class="line"><span>This mortal frame of its mortality.</span></div>
+<div class="line"><span>And there, and there was Aphrodite, she</span></div>
+<div class="line"><span class="pageno target" id="page-76" title="76"> </span><span>That is more lovely than the golden dawn</span></div>
+<div class="line"><span>And from a ripple of the sea was born:</span></div>
+<div class="line"><span>And there was Hera, the imperious queen,</span></div>
+<div class="line"><span>And Dian’s chastity, that hunts unseen</span></div>
+<div class="line"><span>What time with spring the woodland boughs are green:</span></div>
+<div class="line"><span>And there was Pan with mirth and pleasantness,</span></div>
+<div class="line"><span>And Eros’ self that never knew distress</span></div>
+<div class="line"><span>Save for the love of the fair Cretan maid;</span></div>
+<div class="line"><span>There Hermes with the wings of speed arrayed,</span></div>
+<div class="line"><span>And awful Zeus, the king of gods and men,</span></div>
+<div class="line"><span>And ever at his feet Apollo sang</span></div>
+<div class="line"><span>A measure of changing harmonies that rang</span></div>
+<div class="line"><span>From that high mountain over all the world,</span></div>
+<div class="line"><span>And all the sails of fighting ships were furled,</span></div>
+<div class="line"><span>And men drew breath, and there was peace again.</span></div>
+<div class="line"><span>But him that saw, the sight like flame</span></div>
+<div class="line"><span>Or depths of waters overcame:</span></div>
+<div class="line"><span>He swooned, nor heard how ceased the choir</span></div>
+<div class="line"><span>Of strings upon Apollo’s lyre,</span></div>
+<div class="line"><span>Nor saw he how the sweet god stood</span></div>
+<div class="line"><span>And smiled on him in kindly mood,</span></div>
+<div class="line"><span>And stooped, and kissed him as he lay;</span></div>
+<div class="line"><span>Then lightly rose and turned away</span></div>
+<div class="line"><span>To join the bright immortal throng</span></div>
+<div class="line"><span>And make for them another song.</span></div>
+</div>
+</div>
+<div class="level-4 section" id="the-last-verses">
+<h4 class="level-4 pfirst section-title title"><span>The Last Verses</span></h4>
+<div class="line-block outermost">
+<div class="line"><span>O ageless nonpareil of stars</span></div>
+<div class="line"><span>    That shinest through a mist of cloud,</span></div>
+<div class="line"><span>O light beyond the prison bars</span></div>
+<div class="line"><span>    Remote, unwavering, and proud;</span></div>
+<div class="line"><span>Fortunate star and happy light,</span></div>
+<div class="line"><span>Ye benison the gloom of night.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>All hail, unfailing eye and hand,</span></div>
+<div class="line"><span>    All hail, all hail, unsilenced voice,</span></div>
+<div class="line"><span class="pageno target" id="page-77" title="77"> </span><span>That makest dead men understand,</span></div>
+<div class="line"><span>    The very dead in graves rejoice:</span></div>
+<div class="line"><span>Whose utterance, writ in ancient books,</span></div>
+<div class="line"><span>Shall always live, for him that looks.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Many as leaves from autumn trees</span></div>
+<div class="line"><span>    The years shall flutter from on high,</span></div>
+<div class="line"><span>And with their multiple decease</span></div>
+<div class="line"><span>    The souls of men shall fall and die,</span></div>
+<div class="line"><span>Yet, while the empires turn to dust,</span></div>
+<div class="line"><span>You shall live on, because you must.</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>O seven times happy he that dies</span></div>
+<div class="line"><span>    After the splendid harvest-tide,</span></div>
+<div class="line"><span>When strong barns shield from winter skies</span></div>
+<div class="line"><span>    The grain that’s rightly stored inside:</span></div>
+<div class="line"><span>There death shall scatter no more tears</span></div>
+<div class="line"><span>Than o’er the falling of the years:</span></div>
+</div>
+<div class="line-block outermost">
+<div class="line"><span>Aye, happy seven times is he</span></div>
+<div class="line"><span>    Who enters not the silent doors</span></div>
+<div class="line"><span>Before his time, but tenderly</span></div>
+<div class="line"><span>    Death beckons unto him, because</span></div>
+<div class="line"><span>There’s rest within for weary feet</span></div>
+<div class="line"><span>Now all the journey is complete.</span></div>
+</div>
+<div class="clearpage">
+</div>
+</div>
+</div>
+<div class="level-3 section" id="so-we-lay-down-the-pen">
+<h3 class="level-3 pfirst section-title title"><span class="pageno target" id="page-78" title="78"> </span><span>“So we lay down the Pen”</span></h3>
+<div class="line-block outermost">
+<div class="line"><span class="small-caps">So</span><span> we lay down the pen,</span></div>
+<div class="line"><span>So we forbear the building of the rime,</span></div>
+<div class="line"><span>And bid our hearts be steel for times and a time</span></div>
+<div class="line"><span>    Till ends the strife, and then,</span></div>
+<div class="line"><span>When the New Age is verily begun,</span></div>
+<div class="line"><span>God grant that we may do the things undone.</span></div>
+</div>
+<div class="vfill">
+</div>
+<div class="align-None container margin transition">
+<p class="center pfirst"><span>――――</span></p>
+</div>
+<div class="align-None backmatter container">
+<p class="center pfirst"><span class="italics">Printed by Hazell, Watson &amp; Viney, Ld., London and Aylesbury.</span></p>
+</div>
+<!-- -*- encoding: utf-8 -*- -->
+<div class="backmatter">
+</div>
+<p class="pfirst" id="pg-end-line"><span>*** END OF THIS PROJECT GUTENBERG EBOOK </span><span>A SPRING HARVEST</span><span> ***</span></p>
+<div class="cleardoublepage">
+</div>
+</div>
+</div>
+<div class="language-en level-2 pgfooter section" id="a-word-from-project-gutenberg" xml:lang="en" lang="en">
+<span id="pg-footer"></span><h2 class="level-2 pfirst section-title title"><span>A Word from Project Gutenberg</span></h2>
+<p class="pfirst"><span>We will update this book if we find any errors.</span></p>
+<p class="pnext"><span>This book can be found under: </span><a class="reference external" href="http://www.gutenberg.org/ebooks/48371"><span>http://www.gutenberg.org/ebooks/48371</span></a></p>
+<p class="pnext"><span>Creating the works from print editions not protected by U.S. copyright
+law means that no one owns a United States copyright in these works,
+so the Foundation (and you!) can copy and distribute it in the United
+States without permission and without paying copyright royalties.
+Special rules, set forth in the General Terms of Use part of this
+license, apply to copying and distributing Project Gutenberg™
+electronic works to protect the Project Gutenberg™ concept and
+trademark. Project Gutenberg is a registered trademark, and may not be
+used if you charge for the eBooks, unless you receive specific
+permission. If you do not charge anything for copies of this eBook,
+complying with the rules is very easy. You may use this eBook for
+nearly any purpose such as creation of derivative works, reports,
+performances and research.  They may be modified and printed and given
+away – you may do practically </span><em class="italics">anything</em><span> in the United States with
+eBooks not protected by U.S. copyright law. Redistribution is subject
+to the trademark license, especially commercial redistribution.</span></p>
+<div class="level-3 section" id="the-full-project-gutenberg-license">
+<span id="project-gutenberg-license"></span><h3 class="level-3 pfirst section-title title"><span>The Full Project Gutenberg License</span></h3>
+<p class="pfirst"><em class="italics">Please read this before you distribute or use this work.</em></p>
+<p class="pnext"><span>To protect the Project Gutenberg™ mission of promoting the free
+distribution of electronic works, by using or distributing this work
+(or any other work associated in any way with the phrase “Project
+Gutenberg”), you agree to comply with all the terms of the Full
+Project Gutenberg™ License available with this file or online at
+</span><a class="reference external" href="http://www.gutenberg.org/license">http://www.gutenberg.org/license</a><span>.</span></p>
+<div class="level-4 section" id="section-1-general-terms-of-use-redistributing-project-gutenberg-electronic-works">
+<h4 class="level-4 pfirst section-title title"><span>Section 1. General Terms of Use &amp; Redistributing Project Gutenberg™ electronic works</span></h4>
+<p class="pfirst"><strong class="bold">1.A.</strong><span> By reading or using any part of this Project Gutenberg™
+electronic work, you indicate that you have read, understand, agree to
+and accept all the terms of this license and intellectual property
+(trademark/copyright) agreement. If you do not agree to abide by all
+the terms of this agreement, you must cease using and return or
+destroy all copies of Project Gutenberg™ electronic works in your
+possession. If you paid a fee for obtaining a copy of or access to a
+Project Gutenberg™ electronic work and you do not agree to be bound by
+the terms of this agreement, you may obtain a refund from the person
+or entity to whom you paid the fee as set forth in paragraph 1.E.8.</span></p>
+<p class="pnext"><strong class="bold">1.B.</strong><span> “Project Gutenberg” is a registered trademark. It may only be
+used on or associated in any way with an electronic work by people who
+agree to be bound by the terms of this agreement. There are a few
+things that you can do with most Project Gutenberg™ electronic works
+even without complying with the full terms of this agreement. See
+paragraph 1.C below. There are a lot of things you can do with Project
+Gutenberg™ electronic works if you follow the terms of this agreement
+and help preserve free future access to Project Gutenberg™ electronic
+works. See paragraph 1.E below.</span></p>
+<p class="pnext"><strong class="bold">1.C.</strong><span> The Project Gutenberg Literary Archive Foundation (“the
+Foundation” or PGLAF), owns a compilation copyright in the collection
+of Project Gutenberg™ electronic works. Nearly all the individual
+works in the collection are in the public domain in the United
+States. If an individual work is unprotected by copyright law in the
+United States and you are located in the United States, we do not
+claim a right to prevent you from copying, distributing, performing,
+displaying or creating derivative works based on the work as long as
+all references to Project Gutenberg are removed. Of course, we hope
+that you will support the Project Gutenberg™ mission of promoting free
+access to electronic works by freely sharing Project Gutenberg™ works
+in compliance with the terms of this agreement for keeping the Project
+Gutenberg™ name associated with the work. You can easily comply with
+the terms of this agreement by keeping this work in the same format
+with its attached full Project Gutenberg™ License when you share it
+without charge with others.</span></p>
+<p class="pnext"></p>
+<p class="pnext"><strong class="bold">1.D.</strong><span> The copyright laws of the place where you are located also
+govern what you can do with this work. Copyright laws in most
+countries are in a constant state of change. If you are outside the
+United States, check the laws of your country in addition to the terms
+of this agreement before downloading, copying, displaying, performing,
+distributing or creating derivative works based on this work or any
+other Project Gutenberg™ work.  The Foundation makes no
+representations concerning the copyright status of any work in any
+country outside the United States.</span></p>
+<p class="pnext"><strong class="bold">1.E.</strong><span> Unless you have removed all references to Project Gutenberg:</span></p>
+<p class="pnext"><strong class="bold">1.E.1.</strong><span> The following sentence, with active links to, or other
+immediate access to, the full Project Gutenberg™ License must appear
+prominently whenever any copy of a Project Gutenberg™ work (any work
+on which the phrase “Project Gutenberg” appears, or with which the
+phrase “Project Gutenberg” is associated) is accessed, displayed,
+performed, viewed, copied or distributed:</span></p>
+<blockquote>
+<div>
+<p class="pfirst"><span>This eBook is for the use of anyone anywhere in the United States
+and most other parts of the world at no cost and with almost no
+restrictions whatsoever. You may copy it, give it away or re-use it
+under the terms of the Project Gutenberg License included with this
+eBook or online at </span><a class="reference external" href="http://www.gutenberg.org">http://www.gutenberg.org</a><span> .  If you are not
+located in the United States, you'll have to check the laws of the
+country where you are located before using this ebook.</span></p>
+</div>
+</blockquote>
+<p class="pfirst"><strong class="bold">1.E.2.</strong><span> If an individual Project Gutenberg™ electronic work is
+derived from texts not protected by U.S. copyright law (does not
+contain a notice indicating that it is posted with permission of the
+copyright holder), the work can be copied and distributed to anyone in
+the United States without paying any fees or charges. If you are
+redistributing or providing access to a work with the phrase “Project
+Gutenberg” associated with or appearing on the work, you must comply
+either with the requirements of paragraphs 1.E.1 through 1.E.7 or
+obtain permission for the use of the work and the Project Gutenberg™
+trademark as set forth in paragraphs 1.E.8 or 1.E.9.</span></p>
+<p class="pnext"><strong class="bold">1.E.3.</strong><span> If an individual Project Gutenberg™ electronic work is
+posted with the permission of the copyright holder, your use and
+distribution must comply with both paragraphs 1.E.1 through 1.E.7 and
+any additional terms imposed by the copyright holder. Additional terms
+will be linked to the Project Gutenberg™ License for all works posted
+with the permission of the copyright holder found at the beginning of
+this work.</span></p>
+<p class="pnext"><strong class="bold">1.E.4.</strong><span> Do not unlink or detach or remove the full Project
+Gutenberg™ License terms from this work, or any files containing a
+part of this work or any other work associated with Project
+Gutenberg™.</span></p>
+<p class="pnext"><strong class="bold">1.E.5.</strong><span> Do not copy, display, perform, distribute or redistribute
+this electronic work, or any part of this electronic work, without
+prominently displaying the sentence set forth in paragraph 1.E.1 with
+active links or immediate access to the full terms of the Project
+Gutenberg™ License.</span></p>
+<p class="pnext"><strong class="bold">1.E.6.</strong><span> You may convert to and distribute this work in any binary,
+compressed, marked up, nonproprietary or proprietary form, including
+any word processing or hypertext form. However, if you provide access
+to or distribute copies of a Project Gutenberg™ work in a format other
+than “Plain Vanilla ASCII” or other format used in the official
+version posted on the official Project Gutenberg™ web site
+(</span><a class="reference external" href="http://www.gutenberg.org">http://www.gutenberg.org</a><span>), you must, at no additional cost, fee or
+expense to the user, provide a copy, a means of exporting a copy, or a
+means of obtaining a copy upon request, of the work in its original
+“Plain Vanilla ASCII” or other form. Any alternate format must include
+the full Project Gutenberg™ License as specified in paragraph 1.E.1.</span></p>
+<p class="pnext"><strong class="bold">1.E.7.</strong><span> Do not charge a fee for access to, viewing, displaying,
+performing, copying or distributing any Project Gutenberg™ works
+unless you comply with paragraph 1.E.8 or 1.E.9.</span></p>
+<p class="pnext"><strong class="bold">1.E.8.</strong><span> You may charge a reasonable fee for copies of or providing
+access to or distributing Project Gutenberg™ electronic works provided
+that</span></p>
+<ul class="open">
+<li><p class="first pfirst"><span>You pay a royalty fee of 20% of the gross profits you derive from
+the use of Project Gutenberg™ works calculated using the method you
+already use to calculate your applicable taxes. The fee is owed to
+the owner of the Project Gutenberg™ trademark, but he has agreed to
+donate royalties under this paragraph to the Project Gutenberg
+Literary Archive Foundation. Royalty payments must be paid within 60
+days following each date on which you prepare (or are legally
+required to prepare) your periodic tax returns. Royalty payments
+should be clearly marked as such and sent to the Project Gutenberg
+Literary Archive Foundation at the address specified in Section 4,
+“Information about donations to the Project Gutenberg Literary
+Archive Foundation.”</span></p>
+</li>
+<li><p class="first pfirst"><span>You provide a full refund of any money paid by a user who notifies
+you in writing (or by e-mail) within 30 days of receipt that s/he
+does not agree to the terms of the full Project Gutenberg™
+License. You must require such a user to return or destroy all
+copies of the works possessed in a physical medium and discontinue
+all use of and all access to other copies of Project Gutenberg™
+works.</span></p>
+</li>
+<li><p class="first pfirst"><span>You provide, in accordance with paragraph 1.F.3, a full refund of
+any money paid for a work or a replacement copy, if a defect in the
+electronic work is discovered and reported to you within 90 days of
+receipt of the work.</span></p>
+</li>
+<li><p class="first pfirst"><span>You comply with all other terms of this agreement for free
+distribution of Project Gutenberg™ works.</span></p>
+</li>
+</ul>
+<p class="pfirst"><strong class="bold">1.E.9.</strong><span> If you wish to charge a fee or distribute a Project
+Gutenberg™ electronic work or group of works on different terms than
+are set forth in this agreement, you must obtain permission in writing
+from both the Project Gutenberg Literary Archive Foundation and The
+Project Gutenberg Trademark LLC, the owner of the Project Gutenberg™
+trademark. Contact the Foundation as set forth in Section 3. below.</span></p>
+<p class="pnext"><strong class="bold">1.F.</strong></p>
+<p class="pnext"><strong class="bold">1.F.1.</strong><span> Project Gutenberg volunteers and employees expend
+considerable effort to identify, do copyright research on, transcribe
+and proofread works not protected by U.S. copyright law in creating
+the Project Gutenberg™ collection. Despite these efforts, Project
+Gutenberg™ electronic works, and the medium on which they may be
+stored, may contain “Defects,” such as, but not limited to,
+incomplete, inaccurate or corrupt data, transcription errors, a
+copyright or other intellectual property infringement, a defective or
+damaged disk or other medium, a computer virus, or computer codes that
+damage or cannot be read by your equipment.</span></p>
+<p class="pnext"><strong class="bold">1.F.2.</strong><span> LIMITED WARRANTY, DISCLAIMER OF DAMAGES – Except for the
+“Right of Replacement or Refund” described in paragraph 1.F.3, the
+Project Gutenberg Literary Archive Foundation, the owner of the
+Project Gutenberg™ trademark, and any other party distributing a
+Project Gutenberg™ electronic work under this agreement, disclaim all
+liability to you for damages, costs and expenses, including legal
+fees. YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE, STRICT
+LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT THOSE
+PROVIDED IN PARAGRAPH 1.F.3. YOU AGREE THAT THE FOUNDATION, THE
+TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT BE
+LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL, PUNITIVE OR
+INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH
+DAMAGE.</span></p>
+<p class="pnext"><strong class="bold">1.F.3.</strong><span> LIMITED RIGHT OF REPLACEMENT OR REFUND – If you discover a
+defect in this electronic work within 90 days of receiving it, you can
+receive a refund of the money (if any) you paid for it by sending a
+written explanation to the person you received the work from. If you
+received the work on a physical medium, you must return the medium
+with your written explanation. The person or entity that provided you
+with the defective work may elect to provide a replacement copy in
+lieu of a refund. If you received the work electronically, the person
+or entity providing it to you may choose to give you a second
+opportunity to receive the work electronically in lieu of a refund. If
+the second copy is also defective, you may demand a refund in writing
+without further opportunities to fix the problem.</span></p>
+<p class="pnext"><strong class="bold">1.F.4.</strong><span> Except for the limited right of replacement or refund set
+forth in paragraph 1.F.3, this work is provided to you ‘AS-IS,’ WITH
+NO OTHER WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PURPOSE.</span></p>
+<p class="pnext"><strong class="bold">1.F.5.</strong><span> Some states do not allow disclaimers of certain implied
+warranties or the exclusion or limitation of certain types of
+damages. If any disclaimer or limitation set forth in this agreement
+violates the law of the state applicable to this agreement, the
+agreement shall be interpreted to make the maximum disclaimer or
+limitation permitted by the applicable state law. The invalidity or
+unenforceability of any provision of this agreement shall not void the
+remaining provisions.</span></p>
+<p class="pnext"><strong class="bold">1.F.6.</strong><span> INDEMNITY – You agree to indemnify and hold the Foundation,
+the trademark owner, any agent or employee of the Foundation, anyone
+providing copies of Project Gutenberg™ electronic works in accordance
+with this agreement, and any volunteers associated with the
+production, promotion and distribution of Project Gutenberg™
+electronic works, harmless from all liability, costs and expenses,
+including legal fees, that arise directly or indirectly from any of
+the following which you do or cause to occur: (a) distribution of this
+or any Project Gutenberg™ work, (b) alteration, modification, or
+additions or deletions to any Project Gutenberg™ work, and (c) any
+Defect you cause.</span></p>
+</div>
+<div class="level-4 section" id="section-2-information-about-the-mission-of-project-gutenberg">
+<h4 class="level-4 pfirst section-title title"><span>Section 2. Information about the Mission of Project Gutenberg™</span></h4>
+<p class="pfirst"><span>Project Gutenberg™ is synonymous with the free distribution of
+electronic works in formats readable by the widest variety of
+computers including obsolete, old, middle-aged and new computers. It
+exists because of the efforts of hundreds of volunteers and donations
+from people in all walks of life.</span></p>
+<p class="pnext"><span>Volunteers and financial support to provide volunteers with the
+assistance they need, is critical to reaching Project Gutenberg™'s
+goals and ensuring that the Project Gutenberg™ collection will remain
+freely available for generations to come. In 2001, the Project
+Gutenberg Literary Archive Foundation was created to provide a secure
+and permanent future for Project Gutenberg™ and future generations. To
+learn more about the Project Gutenberg Literary Archive Foundation and
+how your efforts and donations can help, see Sections 3 and 4 and the
+Foundation web page at </span><a class="reference external" href="http://www.pglaf.org">http://www.pglaf.org</a><span> .</span></p>
+</div>
+<div class="level-4 section" id="section-3-information-about-the-project-gutenberg-literary-archive-foundation">
+<h4 class="level-4 pfirst section-title title"><span>Section 3. Information about the Project Gutenberg Literary Archive Foundation</span></h4>
+<p class="pfirst"><span>The Project Gutenberg Literary Archive Foundation is a non profit
+501(c)(3) educational corporation organized under the laws of the
+state of Mississippi and granted tax exempt status by the Internal
+Revenue Service. The Foundation's EIN or federal tax identification
+number is 64-6221541. Its 501(c)(3) letter is posted at
+</span><a class="reference external" href="http://www.gutenberg.org/fundraising/pglaf">http://www.gutenberg.org/fundraising/pglaf</a><span> . Contributions to the
+Project Gutenberg Literary Archive Foundation are tax deductible to
+the full extent permitted by U.S.  federal laws and your state's laws.</span></p>
+<p class="pnext"><span>The Foundation's principal office is in Fairbanks, Alaska, with the
+mailing address: PO Box 750175, Fairbanks, AK 99775, but its
+volunteers and employees are scattered throughout numerous
+locations. Its business office is located at 809 North 1500 West, Salt
+Lake City, UT 84116, (801) 596-1887, email </span><a class="reference external" href="mailto:business@pglaf.org">business@pglaf.org</a><span>. Email
+contact links and up to date contact information can be found at the
+Foundation's web site and official page at </span><a class="reference external" href="http://www.pglaf.org">http://www.pglaf.org</a></p>
+<p class="pnext"><span>For additional contact information:</span></p>
+<blockquote>
+<div>
+<div class="line-block outermost">
+<div class="line"><span>Dr. Gregory B. Newby</span></div>
+<div class="line"><span>Chief Executive and Director</span></div>
+<div class="line"><a class="reference external" href="mailto:gbnewby@pglaf.org">gbnewby@pglaf.org</a></div>
+</div>
+</div>
+</blockquote>
+</div>
+<div class="level-4 section" id="section-4-information-about-donations-to-the-project-gutenberg-literary-archive-foundation">
+<h4 class="level-4 pfirst section-title title"><span>Section 4. Information about Donations to the Project Gutenberg Literary Archive Foundation</span></h4>
+<p class="pfirst"><span>Project Gutenberg™ depends upon and cannot survive without wide spread
+public support and donations to carry out its mission of increasing
+the number of public domain and licensed works that can be freely
+distributed in machine readable form accessible by the widest array of
+equipment including outdated equipment. Many small donations ($1 to
+$5,000) are particularly important to maintaining tax exempt status
+with the IRS.</span></p>
+<p class="pnext"><span>The Foundation is committed to complying with the laws regulating
+charities and charitable donations in all 50 states of the United
+States. Compliance requirements are not uniform and it takes a
+considerable effort, much paperwork and many fees to meet and keep up
+with these requirements. We do not solicit donations in locations
+where we have not received written confirmation of compliance. To SEND
+DONATIONS or determine the status of compliance for any particular
+state visit </span><a class="reference external" href="http://www.gutenberg.org/fundraising/donate">http://www.gutenberg.org/fundraising/donate</a></p>
+<p class="pnext"><span>While we cannot and do not solicit contributions from states where we
+have not met the solicitation requirements, we know of no prohibition
+against accepting unsolicited donations from donors in such states who
+approach us with offers to donate.</span></p>
+<p class="pnext"><span>International donations are gratefully accepted, but we cannot make
+any statements concerning tax treatment of donations received from
+outside the United States. U.S. laws alone swamp our small staff.</span></p>
+<p class="pnext"><span>Please check the Project Gutenberg Web pages for current donation
+methods and addresses. Donations are accepted in a number of other
+ways including checks, online payments and credit card donations. To
+donate, please visit: </span><a class="reference external" href="http://www.gutenberg.org/fundraising/donate">http://www.gutenberg.org/fundraising/donate</a></p>
+</div>
+<div class="level-4 section" id="section-5-general-information-about-project-gutenberg-electronic-works">
+<h4 class="level-4 pfirst section-title title"><span>Section 5. General Information About Project Gutenberg™ electronic works.</span></h4>
+<p class="pfirst"><span>Professor Michael S. Hart is the originator of the Project Gutenberg™
+concept of a library of electronic works that could be freely shared
+with anyone. For thirty years, he produced and distributed Project
+Gutenberg™ eBooks with only a loose network of volunteer support.</span></p>
+<p class="pnext"><span>Project Gutenberg™ eBooks are often created from several printed
+editions, all of which are confirmed as not protected by copyright in
+the U.S. unless a copyright notice is included. Thus, we do not
+necessarily keep eBooks in compliance with any particular paper
+edition.</span></p>
+<p class="pnext"><span>Each eBook is in a subdirectory of the same number as the eBook's
+eBook number, often in several formats including plain vanilla ASCII,
+compressed (zipped), HTML and others.</span></p>
+<p class="pnext"><span>Corrected </span><em class="italics">editions</em><span> of our eBooks replace the old file and take over
+the old filename and etext number. The replaced older file is
+renamed. </span><em class="italics">Versions</em><span> based on separate sources are treated as new
+eBooks receiving new filenames and etext numbers.</span></p>
+<p class="pnext"><span>Most people start at our Web site which has the main PG search
+facility:</span></p>
+<blockquote>
+<div>
+<p class="pfirst"><a class="reference external" href="http://www.gutenberg.org">http://www.gutenberg.org</a></p>
+</div>
+</blockquote>
+<p class="pfirst"><span>This Web site includes information about Project Gutenberg™, including
+how to make donations to the Project Gutenberg Literary Archive
+Foundation, how to help produce our new eBooks, and how to subscribe
+to our email newsletter to hear about new eBooks.</span></p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
